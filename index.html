@@ -102,6 +102,31 @@
         ::-webkit-scrollbar-thumb:hover {
             background: #BF953F;
         }
+
+        /* Venue Card specific */
+        .venue-card {
+            transition: all 0.4s ease;
+        }
+        .venue-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(191, 149, 63, 0.5);
+            background: rgba(30, 30, 30, 0.9);
+        }
+        .venue-img-container {
+            overflow: hidden;
+            height: 200px;
+            width: 100%;
+            position: relative;
+        }
+        .venue-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        .venue-card:hover .venue-img {
+            transform: scale(1.1);
+        }
     </style>
 </head>
 <body class="antialiased selection:bg-[#D4AF37] selection:text-black">
@@ -135,6 +160,10 @@
         </a>
         <a href="#offer" class="group flex items-center gap-3 justify-end">
             <span class="opacity-0 group-hover:opacity-100 text-xs text-[#D4AF37] transition-opacity duration-300 font-bold uppercase tracking-widest">Oferta</span>
+            <div class="w-2 h-2 rounded-full bg-white/20 group-hover:bg-[#D4AF37] group-hover:scale-150 transition-all duration-300"></div>
+        </a>
+        <a href="#shortlist" class="group flex items-center gap-3 justify-end">
+            <span class="opacity-0 group-hover:opacity-100 text-xs text-[#D4AF37] transition-opacity duration-300 font-bold uppercase tracking-widest">Candidatos</span>
             <div class="w-2 h-2 rounded-full bg-white/20 group-hover:bg-[#D4AF37] group-hover:scale-150 transition-all duration-300"></div>
         </a>
     </div>
@@ -371,7 +400,7 @@
 
             <div class="grid md:grid-cols-2 gap-8 mb-12">
                 <div class="space-y-6 bg-white/5 p-8 rounded-2xl border border-white/10 backdrop-blur-sm">
-                    <h3 class="text-white font-serif font-bold text-xl border-b border-white/10 pb-4">Scope of Work</h3>
+                    <h3 class="text-white font-serif font-bold text-xl border-b border-white/10 pb-4">Alcance de Gestión</h3>
                     <ul class="space-y-5 text-gray-300 text-sm">
                         <li class="flex gap-4 items-start"><i class="fas fa-check text-[#D4AF37] mt-1"></i> <span>Lobbying Gubernamental Directo en Abu Dhabi (DCT & Miral).</span></li>
                         <li class="flex gap-4 items-start"><i class="fas fa-check text-[#D4AF37] mt-1"></i> <span>Bloqueo de Exclusividad de Fechas en Al Ain.</span></li>
@@ -404,7 +433,7 @@
                     <div>
                         <h3 class="text-xl font-bold text-white mb-2">Garantía de "Riesgo Cero"</h3>
                         <p class="text-gray-300 text-sm leading-relaxed">
-                            Si Circolo Life no logra asegurar la sede Al Ain Oasis bajo términos en el contrato firmado (costo cero/simbólico), <span class="text-green-400 font-bold border-b border-green-400/30">la inversión de $63,000 USD será reembolsada íntegramente</span>.
+                            Si Circolo Life no logra asegurar la sede Al Ain Oasis bajo términos de patrocinio gubernamental (costo cero/simbólico), <span class="text-green-400 font-bold border-b border-green-400/30">la inversión de $63,000 USD será reembolsada íntegramente</span>.
                         </p>
                     </div>
                 </div>
@@ -422,6 +451,143 @@
                     <span class="text-xl text-gray-600">×</span>
                     <img src="https://uploads.onecompiler.io/4474z9257/4474zu2ku/circololife_logo.jpeg" alt="Circolo" class="h-6 grayscale hover:grayscale-0 transition-all rounded-full">
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Nueva Sección: Venue Shortlist -->
+    <section id="shortlist" class="slide-section bg-black relative border-t border-white/5">
+        <div class="max-w-7xl mx-auto w-full z-10 relative">
+            <div class="text-center mb-12">
+                <span class="text-[#D4AF37] text-xs font-bold tracking-[0.2em] uppercase mb-4 block">Análisis de Mercado</span>
+                <h2 class="text-4xl md:text-5xl mb-4 text-white font-serif">Referencia de Venues EAU: Lista de Candidatos Blockchain Jungle</h2>
+                <p class="text-gray-400 text-sm max-w-3xl mx-auto italic border-t border-white/10 pt-4 mt-4">
+                    Nota: Todas las capacidades y rangos de precios son aproximados y se basan en el comportamiento típico del mercado de EAU para eventos a gran escala. Los números finales deben confirmarse directamente con el equipo de ventas/eventos de cada venue.
+                </p>
+            </div>
+
+            <!-- Grid de Venues -->
+            <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
+                
+                <!-- Card 1: Manarat Al Saadiyat -->
+                <div class="glass-panel venue-card rounded-xl overflow-hidden group">
+                    <div class="venue-img-container">
+                        <img src="https://visitabudhabi.ae/-/media/project/vad/galleryimages/what-to-see/historical-and-cultural-attractions/manarat-al-saadiyat/manarat-al-saadiyat-04.jpg?rev=6795bea86da548c7a48231088d30fc2b" class="venue-img" alt="Manarat Al Saadiyat">
+                        <div class="absolute top-4 right-4 bg-black/70 px-3 py-1 text-xs text-white rounded backdrop-blur">Abu Dhabi</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-[#D4AF37] mb-2 font-serif">Manarat Al Saadiyat</h3>
+                        <ul class="text-sm text-gray-300 space-y-3">
+                            <li><strong class="text-white block text-xs uppercase tracking-wide opacity-70">Tipo</strong> Centro cultural con salas modulares.</li>
+                            <li><strong class="text-white block text-xs uppercase tracking-wide opacity-70">Capacidad</strong> Ideal 1k-2k. 4k requiere setup complejo int/ext.</li>
+                            <li><strong class="text-white block text-xs uppercase tracking-wide opacity-70">Alquiler Est. (5 Días)</strong> <span class="text-red-400">USD 95k – 165k</span></li>
+                            <li class="pt-2 border-t border-white/10 italic text-xs">"Visualmente fuerte, pero operativamente justo para 4,000 pax."</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Card 2: ADNEC -->
+                <div class="glass-panel venue-card rounded-xl overflow-hidden group">
+                    <div class="venue-img-container">
+                        <img src="https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04?q=80&w=1920&auto=format&fit=crop" class="venue-img" alt="ADNEC">
+                        <div class="absolute top-4 right-4 bg-black/70 px-3 py-1 text-xs text-white rounded backdrop-blur">Abu Dhabi</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-[#D4AF37] mb-2 font-serif">ADNEC</h3>
+                        <ul class="text-sm text-gray-300 space-y-3">
+                            <li><strong class="text-white block text-xs uppercase tracking-wide opacity-70">Tipo</strong> Principal centro de exposiciones y convenciones.</li>
+                            <li><strong class="text-white block text-xs uppercase tracking-wide opacity-70">Capacidad</strong> 4,000+ pax es sencillo.</li>
+                            <li><strong class="text-white block text-xs uppercase tracking-wide opacity-70">Alquiler Est. (5 Días)</strong> <span class="text-red-400">USD 245k – 490k</span></li>
+                            <li class="pt-2 border-t border-white/10 italic text-xs">"Técnicamente ideal, pero sensación corporativa/expo si no se brandea."</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Card 3: Emirates Palace -->
+                <div class="glass-panel venue-card rounded-xl overflow-hidden group">
+                    <div class="venue-img-container">
+                        <img src="https://images.unsplash.com/photo-1590001155093-a3c66ab0c3ff?q=80&w=1920&auto=format&fit=crop" class="venue-img" alt="Emirates Palace">
+                        <div class="absolute top-4 right-4 bg-black/70 px-3 py-1 text-xs text-white rounded backdrop-blur">Abu Dhabi</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-[#D4AF37] mb-2 font-serif">Emirates Palace MO</h3>
+                        <ul class="text-sm text-gray-300 space-y-3">
+                            <li><strong class="text-white block text-xs uppercase tracking-wide opacity-70">Tipo</strong> Hotel palacio de ultra lujo.</li>
+                            <li><strong class="text-white block text-xs uppercase tracking-wide opacity-70">Capacidad</strong> Salón ~2k. 4k requiere múltiples áreas.</li>
+                            <li><strong class="text-white block text-xs uppercase tracking-wide opacity-70">Alquiler Est. (5 Días)</strong> <span class="text-red-400">USD 330k – 680k</span></li>
+                            <li class="pt-2 border-t border-white/10 italic text-xs">"Prestigio icónico, pero costo muy alto para capacidad de 4k."</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Card 4: Al Ain Palace Museum -->
+                <div class="glass-panel venue-card rounded-xl overflow-hidden group">
+                    <div class="venue-img-container">
+                        <img src="https://images.unsplash.com/photo-1546412414-e1885259563a?q=80&w=1920&auto=format&fit=crop" class="venue-img" alt="Al Ain Palace Museum">
+                        <div class="absolute top-4 right-4 bg-black/70 px-3 py-1 text-xs text-white rounded backdrop-blur">Al Ain</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-[#D4AF37] mb-2 font-serif">Al Ain Palace Museum</h3>
+                        <ul class="text-sm text-gray-300 space-y-3">
+                            <li><strong class="text-white block text-xs uppercase tracking-wide opacity-70">Tipo</strong> Residencia real histórica/museo.</li>
+                            <li><strong class="text-white block text-xs uppercase tracking-wide opacity-70">Capacidad</strong> No apto naturalmente para 4k pax. Restricciones.</li>
+                            <li><strong class="text-white block text-xs uppercase tracking-wide opacity-70">Alquiler Est. (5 Días)</strong> <span class="text-red-400">USD 55k – 120k</span></li>
+                            <li class="pt-2 border-t border-white/10 italic text-xs">"Alto valor patrimonial pero complejidad operativa extrema."</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Card 5: Madinat Jumeirah -->
+                <div class="glass-panel venue-card rounded-xl overflow-hidden group">
+                    <div class="venue-img-container">
+                        <img src="https://nuba.com/wp-content/uploads/2023/11/Dubai-Jumeirah-Al-Qasr-Entrance-Aerial-Drone.jpg" class="venue-img" alt="Madinat Jumeirah">
+                        <div class="absolute top-4 right-4 bg-black/70 px-3 py-1 text-xs text-white rounded backdrop-blur">Dubái</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-[#D4AF37] mb-2 font-serif">Madinat Jumeirah</h3>
+                        <ul class="text-sm text-gray-300 space-y-3">
+                            <li><strong class="text-white block text-xs uppercase tracking-wide opacity-70">Tipo</strong> Resort integrado de lujo.</li>
+                            <li><strong class="text-white block text-xs uppercase tracking-wide opacity-70">Capacidad</strong> Salones ~2k. 4k posible combinado.</li>
+                            <li><strong class="text-white block text-xs uppercase tracking-wide opacity-70">Alquiler Est. (5 Días)</strong> <span class="text-red-400">USD 270k – 600k</span></li>
+                            <li class="pt-2 border-t border-white/10 italic text-xs">"Historia visual fuerte, excelente para flagship si presupuesto permite."</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Card 6: JW Marriott Marquis -->
+                <div class="glass-panel venue-card rounded-xl overflow-hidden group">
+                    <div class="venue-img-container">
+                        <img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?q=80&w=1920&auto=format&fit=crop" class="venue-img" alt="JW Marriott Marquis">
+                        <div class="absolute top-4 right-4 bg-black/70 px-3 py-1 text-xs text-white rounded backdrop-blur">Dubái</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-[#D4AF37] mb-2 font-serif">JW Marriott Marquis</h3>
+                        <ul class="text-sm text-gray-300 space-y-3">
+                            <li><strong class="text-white block text-xs uppercase tracking-wide opacity-70">Tipo</strong> Principal hotel de negocios 5 estrellas.</li>
+                            <li><strong class="text-white block text-xs uppercase tracking-wide opacity-70">Capacidad</strong> Salón ~1.5k. 4k requiere mult-salas.</li>
+                            <li><strong class="text-white block text-xs uppercase tracking-wide opacity-70">Alquiler Est. (5 Días)</strong> <span class="text-red-400">USD 165k – 330k</span></li>
+                            <li class="pt-2 border-t border-white/10 italic text-xs">"Buena función y ubicación, visualmente menos único."</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Card 7: Grand Hyatt Dubai -->
+                <div class="glass-panel venue-card rounded-xl overflow-hidden group md:col-span-2 xl:col-span-1">
+                    <div class="venue-img-container">
+                        <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=1920&auto=format&fit=crop" class="venue-img" alt="Grand Hyatt Dubai">
+                        <div class="absolute top-4 right-4 bg-black/70 px-3 py-1 text-xs text-white rounded backdrop-blur">Dubái</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-[#D4AF37] mb-2 font-serif">Grand Hyatt Dubai</h3>
+                        <ul class="text-sm text-gray-300 space-y-3">
+                            <li><strong class="text-white block text-xs uppercase tracking-wide opacity-70">Tipo</strong> Gran hotel estilo convención.</li>
+                            <li><strong class="text-white block text-xs uppercase tracking-wide opacity-70">Capacidad</strong> Puede manejar 3k+. 4k factible.</li>
+                            <li><strong class="text-white block text-xs uppercase tracking-wide opacity-70">Alquiler Est. (5 Días)</strong> <span class="text-red-400">USD 190k – 380k</span></li>
+                            <li class="pt-2 border-t border-white/10 italic text-xs">"Balance capacidad/costo, pero sensación estándar de hotel."</li>
+                        </ul>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
