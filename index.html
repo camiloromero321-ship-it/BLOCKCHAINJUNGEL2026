@@ -5,20 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blockchain Jungle Oasis 2026 - Propuesta Estratégica</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap');
         
         body {
             font-family: 'Montserrat', sans-serif;
             scroll-behavior: smooth;
-            background-color: #000000; /* Fondo negro global */
+            background-color: #050505; /* Negro profundo */
+            color: #ffffff;
         }
         
         h1, h2, h3, .serif-font {
             font-family: 'Playfair Display', serif;
         }
 
+        /* Utilidad para secciones de pantalla completa */
         .slide-section {
             min-height: 100vh;
             display: flex;
@@ -26,11 +28,10 @@
             justify-content: center;
             position: relative;
             overflow: hidden;
-            padding: 4rem 2rem;
-            padding-top: 6rem; /* Espacio para el header fijo */
-            background-color: #000000; /* Asegurar fondo negro en cada sección */
+            padding: 6rem 1.5rem 4rem 1.5rem; 
         }
 
+        /* Gradiente Dorado de Lujo */
         .bg-gradient-gold {
             background: linear-gradient(135deg, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C);
         }
@@ -39,335 +40,554 @@
             background: linear-gradient(135deg, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            background-size: 200% auto;
+            animation: shine 5s linear infinite;
         }
 
+        .text-glow-gold {
+            text-shadow: 0 0 20px rgba(191, 149, 63, 0.4);
+        }
+
+        @keyframes shine {
+            to { background-position: 200% center; }
+        }
+
+        /* Paneles de Vidrio (Glassmorphism) */
         .glass-panel {
-            background: rgba(20, 20, 20, 0.6); /* Fondo más oscuro para contraste */
-            backdrop-filter: blur(15px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            background: rgba(20, 20, 20, 0.7);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
         }
 
+        .glass-panel-accent {
+            background: rgba(20, 30, 20, 0.8);
+            border: 1px solid rgba(74, 222, 128, 0.2);
+            box-shadow: 0 0 30px rgba(74, 222, 128, 0.05);
+        }
+
+        /* Animaciones */
         .fade-in-up {
-            animation: fadeInUp 1s ease-out;
+            animation: fadeInUp 1s cubic-bezier(0.2, 0.8, 0.2, 1);
         }
 
         @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(20px); }
+            from { opacity: 0; transform: translateY(30px); }
             to { opacity: 1; transform: translateY(0); }
         }
 
-        /* Estilo para los Logos */
-        .logo-container img {
-            max-height: 60px;
+        /* Ajuste de Logos */
+        .nav-logo {
+            height: 50px;
+            width: auto;
             object-fit: contain;
             transition: transform 0.3s ease;
         }
-        .logo-container img:hover {
+        .nav-logo:hover {
             transform: scale(1.05);
+        }
+
+        /* Scrollbar personalizado */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #111;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #444;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #BF953F;
+        }
+
+        /* Venue Card specific */
+        .venue-card {
+            transition: all 0.4s ease;
+        }
+        .venue-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(191, 149, 63, 0.5);
+            background: rgba(30, 30, 30, 0.9);
+        }
+        .venue-img-container {
+            overflow: hidden;
+            height: 200px;
+            width: 100%;
+            position: relative;
+        }
+        .venue-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        .venue-card:hover .venue-img {
+            transform: scale(1.1);
         }
     </style>
 </head>
-<body class="text-white antialiased">
+<body class="antialiased selection:bg-[#D4AF37] selection:text-black">
 
-    <!-- HEADER CON LOGOS -->
-    <nav class="fixed top-0 left-0 right-0 z-50 bg-black/90 backdrop-blur-md border-b border-white/10 py-4 px-6 md:px-12 flex justify-between items-center transition-all duration-300">
-        <!-- Logo Blockchain Jungle -->
-        <div class="logo-container">
-            <img src="https://uploads.onecompiler.io/4474z9257/4474zu2ku/Blockchain-Jungle.jpg" alt="Blockchain Jungle Logo" class="h-12 md:h-16">
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-md border-b border-white/5 py-3 px-6 md:px-12 flex justify-between items-center transition-all duration-300">
+        <div>
+            <img src="https://uploads.onecompiler.io/4474z9257/4474zu2ku/Blockchain-Jungle.jpg" alt="Blockchain Jungle" class="nav-logo rounded bg-black">
         </div>
         
-
-
-        <!-- Logo Circolo Life -->
-        <div class="logo-container text-right">
-            <img src="https://uploads.onecompiler.io/4474z9257/4474zu2ku/circololife_logo.jpeg" alt="Circolo Life Logo" class="h-12 md:h-16 opacity-90 rounded-full border border-white/10">
+        <div>
+            <img src="https://uploads.onecompiler.io/4474z9257/4474zu2ku/circololife_logo.jpeg" alt="Circolo Life" class="nav-logo rounded-full border border-white/10 opacity-90">
         </div>
     </nav>
 
-    <!-- Navigation Dots -->
-    <div class="fixed right-5 top-1/2 transform -translate-y-1/2 z-50 hidden md:flex flex-col gap-4">
-        <a href="#cover" class="w-3 h-3 rounded-full bg-white/20 hover:bg-[#D4AF37] transition-all" title="Inicio"></a>
-        <a href="#vision" class="w-3 h-3 rounded-full bg-white/20 hover:bg-[#D4AF37] transition-all" title="Visión"></a>
-        <a href="#venue" class="w-3 h-3 rounded-full bg-white/20 hover:bg-[#D4AF37] transition-all" title="Venue"></a>
-        <a href="#partner" class="w-3 h-3 rounded-full bg-white/20 hover:bg-[#D4AF37] transition-all" title="Partner"></a>
-        <a href="#financials" class="w-3 h-3 rounded-full bg-white/20 hover:bg-[#D4AF37] transition-all" title="Finanzas"></a>
-        <a href="#offer" class="w-3 h-3 rounded-full bg-white/20 hover:bg-[#D4AF37] transition-all" title="Oferta"></a>
+    <div class="fixed right-6 top-1/2 transform -translate-y-1/2 z-50 hidden md:flex flex-col gap-5">
+        <a href="#cover" class="group flex items-center gap-3 justify-end">
+            <span class="opacity-0 group-hover:opacity-100 text-xs text-[#D4AF37] transition-opacity duration-300 font-bold uppercase tracking-widest">Inicio</span>
+            <div class="w-2 h-2 rounded-full bg-white/20 group-hover:bg-[#D4AF37] group-hover:scale-150 transition-all duration-300"></div>
+        </a>
+        <a href="#vision" class="group flex items-center gap-3 justify-end">
+            <span class="opacity-0 group-hover:opacity-100 text-xs text-[#D4AF37] transition-opacity duration-300 font-bold uppercase tracking-widest">Visión</span>
+            <div class="w-2 h-2 rounded-full bg-white/20 group-hover:bg-[#D4AF37] group-hover:scale-150 transition-all duration-300"></div>
+        </a>
+        <a href="#venue" class="group flex items-center gap-3 justify-end">
+            <span class="opacity-0 group-hover:opacity-100 text-xs text-[#D4AF37] transition-opacity duration-300 font-bold uppercase tracking-widest">Venue</span>
+            <div class="w-2 h-2 rounded-full bg-white/20 group-hover:bg-[#D4AF37] group-hover:scale-150 transition-all duration-300"></div>
+        </a>
+        <a href="#financials" class="group flex items-center gap-3 justify-end">
+            <span class="opacity-0 group-hover:opacity-100 text-xs text-[#D4AF37] transition-opacity duration-300 font-bold uppercase tracking-widest">Finanzas</span>
+            <div class="w-2 h-2 rounded-full bg-white/20 group-hover:bg-[#D4AF37] group-hover:scale-150 transition-all duration-300"></div>
+        </a>
+        <a href="#offer" class="group flex items-center gap-3 justify-end">
+            <span class="opacity-0 group-hover:opacity-100 text-xs text-[#D4AF37] transition-opacity duration-300 font-bold uppercase tracking-widest">Oferta</span>
+            <div class="w-2 h-2 rounded-full bg-white/20 group-hover:bg-[#D4AF37] group-hover:scale-150 transition-all duration-300"></div>
+        </a>
+        <a href="#shortlist" class="group flex items-center gap-3 justify-end">
+            <span class="opacity-0 group-hover:opacity-100 text-xs text-[#D4AF37] transition-opacity duration-300 font-bold uppercase tracking-widest">Candidatos</span>
+            <div class="w-2 h-2 rounded-full bg-white/20 group-hover:bg-[#D4AF37] group-hover:scale-150 transition-all duration-300"></div>
+        </a>
     </div>
 
-    <!-- SLIDE 1: COVER -->
-    <section id="cover" class="slide-section relative items-center text-center bg-[url('https://images.unsplash.com/photo-1542259682-938025c8d0be?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center">
-        <!-- Overlay Negro Puro para oscurecer la imagen -->
-        <div class="absolute inset-0 bg-black/80"></div>
+    <section id="cover" class="slide-section items-center text-center relative">
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1542259682-938025c8d0be?q=80&w=2070&auto=format&fit=crop" class="w-full h-full object-cover opacity-40" alt="Background">
+            <div class="absolute inset-0 bg-gradient-to-b from-black/90 via-black/50 to-black"></div>
+        </div>
+
         <div class="relative z-10 max-w-5xl mx-auto px-6 fade-in-up">
-            <div class="mb-6 flex justify-center gap-6 md:hidden">
-                 <!-- Logos móviles si es necesario -->
+            <div class="inline-block px-4 py-1 rounded-full border border-[#D4AF37]/30 bg-[#D4AF37]/10 mb-8 backdrop-blur-sm">
+                <p class="text-[#D4AF37] tracking-[0.3em] uppercase text-xs font-bold">Propuesta Estratégica Confidencial</p>
             </div>
-            <p class="text-[#D4AF37] tracking-[0.3em] uppercase text-sm mb-4 font-bold">Propuesta Estratégica Confidencial</p>
-            <h1 class="text-5xl md:text-7xl font-bold mb-6 leading-tight">
+            
+            <h1 class="text-5xl md:text-8xl font-bold mb-6 leading-tight tracking-tight">
                 BLOCKCHAIN <br>
-                <span class="text-gradient-gold">JUNGLE OASIS</span> <br>
-                2026
+                <span class="text-gradient-gold text-glow-gold">JUNGLE OASIS</span> <br>
+                <span class="text-white text-4xl md:text-7xl">2026</span>
             </h1>
-            <div class="w-32 h-1 bg-[#D4AF37] mx-auto mb-8 rounded-full"></div>
-            <p class="text-xl md:text-3xl text-gray-200 font-light mb-10">
-                De la Selva Latina al Oasis Soberano
+            
+            <div class="w-24 h-1 bg-gradient-to-r from-transparent via-[#D4AF37] to-transparent mx-auto mb-10"></div>
+            
+            <p class="text-xl md:text-2xl text-gray-300 font-light mb-12 max-w-2xl mx-auto leading-relaxed">
+                La transición definitiva: De la Selva Latina al Oasis de Soberanía Mundial.
             </p>
             
-            <div class="glass-panel inline-block px-10 py-6 rounded-xl border border-[#D4AF37]/30 shadow-2xl shadow-black/80">
-                <p class="text-xs text-[#D4AF37] uppercase tracking-widest mb-2">Exclusivo Para</p>
-                <p class="text-3xl font-serif font-bold text-white">Juan C. Guerrero</p>
-                <p class="text-sm text-gray-400 mt-1">CEO, Blockchain Jungle</p>
+            <div class="glass-panel inline-flex flex-col md:flex-row items-center gap-6 px-8 py-6 rounded-2xl border-t border-white/10 shadow-2xl">
+                <div class="text-center md:text-left">
+                    <p class="text-[10px] text-[#D4AF37] uppercase tracking-widest mb-1">Exclusivo Para</p>
+                    <p class="text-2xl font-serif font-bold text-white">Juan C. Guerrero</p>
+                    <p class="text-xs text-gray-400">CEO, Blockchain Jungle</p>
+                </div>
+                <div class="hidden md:block w-px h-12 bg-white/10"></div>
+                 <div class="text-center md:text-left">
+                    <p class="text-[10px] text-[#D4AF37] uppercase tracking-widest mb-1">Fecha Validez</p>
+                    <p class="text-xl font-serif text-white">Dic 2025</p>
+                </div>
             </div>
         </div>
         
-        <div class="absolute bottom-10 left-0 right-0 text-center animate-bounce">
-            <i class="fas fa-chevron-down text-2xl text-white/30"></i>
+        <div class="absolute bottom-10 left-0 right-0 text-center animate-bounce z-20">
+            <i class="fas fa-chevron-down text-xl text-[#D4AF37]/50"></i>
         </div>
     </section>
 
-    <!-- SLIDE 2: VISION -->
-    <section id="vision" class="slide-section">
-        <div class="max-w-6xl mx-auto w-full grid md:grid-cols-2 gap-12 items-center">
-            <div class="order-2 md:order-1">
-                <h2 class="text-4xl md:text-5xl mb-6 text-[#D4AF37]">La Evolución <br>Soberana</h2>
-                <div class="w-16 h-1 bg-[#D4AF37] mb-8"></div>
-                <p class="text-gray-400 text-lg mb-6 leading-relaxed">
-                    Blockchain Jungle 2025 posiciona a Costa Rica como el epicentro de la innovación. <br><br>
-                    <strong>La visión para 2026 es elevar la narrativa.</strong> No buscaremos un centro de convenciones; llevaremos a 6,000 líderes mundiales al primer sitio de Patrimonio Mundial de la UNESCO en los EAU.
+    <section id="vision" class="slide-section bg-neutral-950">
+        <div class="max-w-6xl mx-auto w-full grid md:grid-cols-2 gap-16 items-center">
+            <div class="order-2 md:order-1 relative">
+                <div class="absolute -top-20 -left-20 w-64 h-64 bg-[#D4AF37]/5 rounded-full blur-3xl"></div>
+                
+                <h2 class="text-4xl md:text-6xl mb-8 text-white relative z-10">La Evolución <br><span class="text-serif italic text-[#D4AF37]">Soberana</span></h2>
+                
+                <p class="text-gray-400 text-lg mb-8 leading-relaxed border-l-2 border-[#D4AF37]/30 pl-6">
+                    Blockchain Jungle 2025 posicionó a Costa Rica. <br>
+                    <strong>La visión 2026 es escalar la narrativa.</strong> No buscaremos un simple centro de convenciones; llevaremos a 6,000 líderes al primer sitio Patrimonio Mundial de la UNESCO en los EAU.
                 </p>
                 
-                <div class="flex items-center justify-between bg-white/5 p-6 rounded-lg border border-white/10 mt-8">
-                    <div class="text-center">
-                        <span class="block text-4xl font-bold text-gray-500">2025</span>
-                        <span class="text-xs tracking-widest text-gray-600 uppercase">Costa Rica</span>
+                <div class="flex items-center justify-between bg-white/5 p-8 rounded-2xl border border-white/5 relative overflow-hidden">
+                    <div class="absolute top-0 left-0 w-1 h-full bg-[#D4AF37]"></div>
+                    <div class="text-center z-10">
+                        <span class="block text-4xl font-bold text-gray-600">2025</span>
+                        <span class="text-[10px] tracking-[0.2em] text-gray-500 uppercase mt-1 block">Costa Rica</span>
                     </div>
-                    <div class="flex flex-col items-center px-4">
-                        <span class="text-xs text-[#D4AF37] mb-1">EVOLUCIÓN</span>
-                        <i class="fas fa-long-arrow-alt-right text-[#D4AF37] text-2xl"></i>
+                    <div class="flex flex-col items-center px-4 z-10">
+                        <span class="text-[10px] text-[#D4AF37] mb-2 tracking-widest">EVOLUCIÓN</span>
+                        <div class="h-px w-20 bg-[#D4AF37]/50 relative">
+                            <div class="absolute -top-1 -right-1 w-2 h-2 bg-[#D4AF37] rotate-45"></div>
+                        </div>
                     </div>
-                    <div class="text-center">
-                        <span class="block text-4xl font-bold text-[#D4AF37]">2026</span>
-                        <span class="text-xs tracking-widest text-[#D4AF37] uppercase">Abu Dhabi</span>
+                    <div class="text-center z-10">
+                        <span class="block text-4xl font-bold text-white text-glow-gold">2026</span>
+                        <span class="text-[10px] tracking-[0.2em] text-[#D4AF37] uppercase mt-1 block font-bold">Abu Dhabi</span>
                     </div>
                 </div>
             </div>
-            <div class="order-1 md:order-2 relative h-[500px] rounded-xl overflow-hidden shadow-2xl border border-gray-800 group">
-                <img src="https://uploads.onecompiler.io/4474z9257/4474z57yk/Al%20ain%20.jpg" alt="Futuristic Abu Dhabi" class="object-cover w-full h-full opacity-60 hover:opacity-100 transition-opacity duration-1000">
-                <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-90"></div>
-                <div class="absolute bottom-8 left-8 right-8">
-                    <p class="text-[#D4AF37] text-sm uppercase tracking-widest mb-2">El Destino</p>
-                    <p class="text-2xl font-serif text-white">Soberanía de Capital & Infraestructura Milenaria</p>
+            
+            <div class="order-1 md:order-2 relative h-[400px] md:h-[600px] rounded-2xl overflow-hidden shadow-2xl group border border-white/10">
+                <img src="https://uploads.onecompiler.io/4474z9257/4474z57yk/Al%20ain%20.jpg" alt="Futuristic Abu Dhabi" class="object-cover w-full h-full opacity-70 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700">
+                <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
+                <div class="absolute bottom-8 left-8 right-8 translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                    <p class="text-[#D4AF37] text-xs uppercase tracking-widest mb-2 flex items-center gap-2">
+                        <i class="fas fa-map-marker-alt"></i> El Destino
+                    </p>
+                    <p class="text-3xl font-serif text-white leading-tight">Infraestructura Milenaria &<br>Capital Soberano</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- SLIDE 3: THE VENUE -->
-    <section id="venue" class="slide-section relative overflow-hidden">
-        <!-- Background texture muy sutil -->
-        <div class="absolute top-0 right-0 w-2/3 h-full bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-[0.03]"></div>
+    <section id="venue" class="slide-section relative overflow-hidden bg-black">
+        <div class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"></div>
+        <div class="absolute top-0 right-0 w-96 h-96 bg-[#D4AF37]/10 rounded-full blur-[100px]"></div>
         
         <div class="max-w-7xl mx-auto w-full relative z-10">
             <div class="text-center mb-16">
-                <span class="bg-[#D4AF37]/10 text-[#D4AF37] px-4 py-1 rounded-full text-xs font-bold tracking-widest uppercase mb-4 inline-block border border-[#D4AF37]/20">UNESCO World Heritage Site</span>
-                <h2 class="text-5xl md:text-7xl mb-4 text-white">Al Ain Oasis</h2>
-                <p class="text-2xl text-[#D4AF37] italic font-serif">"Donde la historia se encuentra con el futuro"</p>
+                <div class="inline-flex items-center gap-2 px-4 py-1 rounded-full border border-[#D4AF37]/30 text-[#D4AF37] text-[10px] uppercase tracking-widest mb-6">
+                    <i class="fas fa-university"></i> UNESCO World Heritage Site
+                </div>
+                <h2 class="text-5xl md:text-8xl mb-4 text-white font-serif tracking-tight">Al Ain Oasis</h2>
+                <p class="text-xl md:text-2xl text-[#D4AF37] italic font-serif opacity-80">"Donde la historia se encuentra con el futuro financiero"</p>
             </div>
 
-            <div class="grid md:grid-cols-3 gap-6">
-                <!-- Feature 1 -->
-                <div class="bg-neutral-900/50 p-8 rounded-2xl border border-neutral-800 hover:border-[#D4AF37] transition-all group hover:-translate-y-2 hover:bg-neutral-900">
-                    <div class="w-16 h-16 bg-[#D4AF37]/10 rounded-full flex items-center justify-center mb-6 group-hover:bg-[#D4AF37] transition-colors">
-                        <i class="fas fa-water text-3xl text-[#D4AF37] group-hover:text-black"></i>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="glass-panel p-8 rounded-2xl hover:bg-white/5 transition-all group duration-500 hover:-translate-y-2">
+                    <div class="w-14 h-14 bg-[#D4AF37]/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-[#D4AF37] transition-colors border border-[#D4AF37]/20">
+                        <i class="fas fa-water text-2xl text-[#D4AF37] group-hover:text-black"></i>
                     </div>
-                    <h3 class="text-2xl font-bold mb-3 font-serif">El Sistema Falaj</h3>
+                    <h3 class="text-xl font-bold mb-4 font-serif text-white">El Sistema Falaj</h3>
                     <p class="text-gray-400 text-sm leading-relaxed">
-                        La primera red descentralizada de recursos del mundo (3,000 años de antigüedad). <br>
-                        <span class="text-white font-semibold mt-2 block">La metáfora física perfecta para Blockchain.</span>
+                        La primera red descentralizada de recursos del mundo (3,000 años). <br>
+                        <span class="text-[#D4AF37] mt-3 block text-xs uppercase tracking-widest">La metáfora física de Blockchain</span>
                     </p>
                 </div>
-                <!-- Feature 2 -->
-                <div class="bg-neutral-900/50 p-8 rounded-2xl border border-neutral-800 hover:border-[#D4AF37] transition-all group hover:-translate-y-2 hover:bg-neutral-900">
-                    <div class="w-16 h-16 bg-[#D4AF37]/10 rounded-full flex items-center justify-center mb-6 group-hover:bg-[#D4AF37] transition-colors">
-                        <i class="fas fa-tree text-3xl text-[#D4AF37] group-hover:text-black"></i>
+                <div class="glass-panel p-8 rounded-2xl hover:bg-white/5 transition-all group duration-500 hover:-translate-y-2">
+                    <div class="w-14 h-14 bg-[#D4AF37]/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-[#D4AF37] transition-colors border border-[#D4AF37]/20">
+                        <i class="fas fa-tree text-2xl text-[#D4AF37] group-hover:text-black"></i>
                     </div>
-                    <h3 class="text-2xl font-bold mb-3 font-serif">1,200 Hectáreas</h3>
+                    <h3 class="text-xl font-bold mb-4 font-serif text-white">1,200 Hectáreas</h3>
                     <p class="text-gray-400 text-sm leading-relaxed">
-                        147,000 palmeras creando un microclima natural. <br>
-                        <span class="text-white font-semibold mt-2 block">Networking orgánico bajo sombra natural.</span>
+                        147,000 palmeras creando un microclima natural único.<br>
+                        <span class="text-[#D4AF37] mt-3 block text-xs uppercase tracking-widest">Networking orgánico de lujo</span>
                     </p>
                 </div>
-                <!-- Feature 3 -->
-                <div class="bg-neutral-900/50 p-8 rounded-2xl border border-neutral-800 hover:border-[#D4AF37] transition-all group hover:-translate-y-2 hover:bg-neutral-900">
-                    <div class="w-16 h-16 bg-[#D4AF37]/10 rounded-full flex items-center justify-center mb-6 group-hover:bg-[#D4AF37] transition-colors">
-                        <i class="fas fa-university text-3xl text-[#D4AF37] group-hover:text-black"></i>
+                <div class="glass-panel p-8 rounded-2xl hover:bg-white/5 transition-all group duration-500 hover:-translate-y-2">
+                    <div class="w-14 h-14 bg-[#D4AF37]/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-[#D4AF37] transition-colors border border-[#D4AF37]/20">
+                        <i class="fas fa-shield-alt text-2xl text-[#D4AF37] group-hover:text-black"></i>
                     </div>
-                    <h3 class="text-2xl font-bold mb-3 font-serif">Acceso Soberano</h3>
+                    <h3 class="text-xl font-bold mb-4 font-serif text-white">Acceso Soberano</h3>
                     <p class="text-gray-400 text-sm leading-relaxed">
-                        Acceso exclusivo a un sitio protegido por el gobierno para escenarios inmersivos. <br>
-                        <span class="text-white font-semibold mt-2 block">Trading en vivo en un entorno histórico.</span>
+                        Sitio protegido por el gobierno para escenarios de alto nivel.<br>
+                        <span class="text-[#D4AF37] mt-3 block text-xs uppercase tracking-widest">Seguridad Diplomática</span>
                     </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- SLIDE 4: PARTNER & CREDENTIALS -->
-    <section id="partner" class="slide-section text-center relative">
-        <div class="max-w-5xl mx-auto relative z-10">
-            <!-- LOGO CIRCOLO LIFE GRANDE (ACTUALIZADO CON TU ARCHIVO) -->
-            <div class="mb-10 flex justify-center">
-                <img src="https://media.licdn.com/dms/image/v2/D4E3DAQEY4a2M3IRlPQ/image-scale_191_1128/B4EZY.Py5WHkAc-/0/1744801050897/circololife_cover?e=1765940400&v=beta&t=VYgHhxjYn1gi1R7nXSlPL6GjaIFkQwXd2PBwn42W0pY" alt="Circolo Life" class="h-24 md:h-32 object-contain opacity-90 rounded-full border border-[#D4AF37]/30 p-4 bg-black">
-            </div>
-            
-            <h2 class="text-3xl md:text-5xl mb-6">El Socio Estratégico</h2>
-            <p class="text-xl text-gray-400 mb-12 max-w-3xl mx-auto">
-                Arquitectos de Experiencias de <span class="text-[#D4AF37] font-bold">Grado Soberano</span> para Royal Capital Ventures y Family Offices Globales.
-            </p>
-            
-            <div class="grid md:grid-cols-2 gap-6 text-left">
-                <div class="flex gap-5 items-start p-6 bg-white/5 rounded-xl hover:bg-white/10 transition-colors border-l-4 border-[#D4AF37]">
-                    <i class="fas fa-shield-alt text-[#D4AF37] text-2xl mt-1"></i>
-                    <div>
-                        <h4 class="font-bold text-white text-lg">Licencias Gubernamentales</h4>
-                        <p class="text-sm text-gray-400 mt-2">Permisos exclusivos para operar eventos masivos en sitios protegidos por la UNESCO.</p>
+    <section id="partner" class="slide-section text-center relative bg-neutral-900">
+        <div class="max-w-6xl mx-auto relative z-10 w-full">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="text-left">
+                    <div class="inline-block mb-6">
+                        <img src="https://media.licdn.com/dms/image/v2/D4E3DAQEY4a2M3IRlPQ/image-scale_191_1128/B4EZY.Py5WHkAc-/0/1744801050897/circololife_cover?e=1765940400&v=beta&t=VYgHhxjYn1gi1R7nXSlPL6GjaIFkQwXd2PBwn42W0pY" alt="Circolo Life" class="h-20 w-auto object-contain opacity-100 rounded-full border border-[#D4AF37]/30 bg-black p-2">
                     </div>
+                    <h2 class="text-4xl md:text-5xl mb-6 font-serif">El Socio Estratégico</h2>
+                    <p class="text-lg text-gray-400 mb-8 leading-relaxed">
+                        Arquitectos de Experiencias de <span class="text-[#D4AF37] font-bold">Grado Soberano</span> para Royal Capital Ventures y Family Offices Globales. La llave maestra para abrir Abu Dhabi.
+                    </p>
                 </div>
-                <div class="flex gap-5 items-start p-6 bg-white/5 rounded-xl hover:bg-white/10 transition-colors border-l-4 border-[#D4AF37]">
-                    <i class="fas fa-user-tie text-[#D4AF37] text-2xl mt-1"></i>
-                    <div>
-                        <h4 class="font-bold text-white text-lg">Protocolo Soberano</h4>
-                        <p class="text-sm text-gray-400 mt-2">Gestión de seguridad avanzada para reguladores, VIPs y carteras de inversión.</p>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-left">
+                    <div class="p-5 bg-white/5 rounded-xl border border-white/5 hover:border-[#D4AF37]/50 transition-colors">
+                        <i class="fas fa-certificate text-[#D4AF37] text-xl mb-3"></i>
+                        <h4 class="font-bold text-white text-base">Licencias Gubernamentales</h4>
+                        <p class="text-xs text-gray-400 mt-2">Permisos exclusivos para eventos masivos en sitios UNESCO.</p>
                     </div>
-                </div>
-                <div class="flex gap-5 items-start p-6 bg-white/5 rounded-xl hover:bg-white/10 transition-colors border-l-4 border-[#D4AF37]">
-                    <i class="fas fa-handshake text-[#D4AF37] text-2xl mt-1"></i>
-                    <div>
-                        <h4 class="font-bold text-white text-lg">Alianzas DCT</h4>
-                        <p class="text-sm text-gray-400 mt-2">Relación directa y activa con el Departamento de Cultura y Turismo de Abu Dhabi.</p>
+                    <div class="p-5 bg-white/5 rounded-xl border border-white/5 hover:border-[#D4AF37]/50 transition-colors">
+                        <i class="fas fa-user-shield text-[#D4AF37] text-xl mb-3"></i>
+                        <h4 class="font-bold text-white text-base">Protocolo Soberano</h4>
+                        <p class="text-xs text-gray-400 mt-2">Gestión de seguridad avanzada para VIPs y reguladores.</p>
                     </div>
-                </div>
-                <div class="flex gap-5 items-start p-6 bg-white/5 rounded-xl hover:bg-white/10 transition-colors border-l-4 border-[#D4AF37]">
-                    <i class="fas fa-gem text-[#D4AF37] text-2xl mt-1"></i>
-                    <div>
-                        <h4 class="font-bold text-white text-lg">Experiencia Probada</h4>
-                        <p class="text-sm text-gray-400 mt-2">Creadores de "Abu Dhabi Legacy Journeys" para Royal Capital.</p>
+                    <div class="p-5 bg-white/5 rounded-xl border border-white/5 hover:border-[#D4AF37]/50 transition-colors">
+                        <i class="fas fa-handshake-angle text-[#D4AF37] text-xl mb-3"></i>
+                        <h4 class="font-bold text-white text-base">Alianzas DCT</h4>
+                        <p class="text-xs text-gray-400 mt-2">Relación directa con el Departamento de Cultura y Turismo.</p>
+                    </div>
+                    <div class="p-5 bg-white/5 rounded-xl border border-white/5 hover:border-[#D4AF37]/50 transition-colors">
+                        <i class="fas fa-award text-[#D4AF37] text-xl mb-3"></i>
+                        <h4 class="font-bold text-white text-base">Track Record</h4>
+                        <p class="text-xs text-gray-400 mt-2">Creadores de "Legacy Journeys" para Royal Capital.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- SLIDE 5: THE FINANCIALS -->
-    <section id="financials" class="slide-section">
+    <section id="financials" class="slide-section bg-black">
         <div class="max-w-5xl mx-auto w-full">
-            <h2 class="text-4xl md:text-5xl mb-4 text-center">El <span class="text-[#D4AF37] italic font-serif">Game Changer</span> Financiero</h2>
-            <p class="text-center text-gray-400 mb-12">Por qué la alianza con Circolo Life transforma la economía del evento.</p>
+            <h2 class="text-3xl md:text-5xl mb-4 text-center">El <span class="text-[#D4AF37] italic font-serif">Game Changer</span> Financiero</h2>
+            <p class="text-center text-gray-400 mb-12 max-w-2xl mx-auto">Transformación radical de la economía del evento mediante subsidios soberanos.</p>
             
-            <div class="glass-panel p-1 md:p-8 rounded-3xl overflow-hidden relative shadow-2xl bg-black/50">
-                <!-- Etiquetas de esquina -->
-                <div class="hidden md:block absolute top-0 right-0 bg-red-900/80 text-white text-xs font-bold px-6 py-2 rounded-bl-xl z-20 border-l border-b border-red-500/30">SIN CIRCOLO</div>
-                <div class="hidden md:block absolute top-0 left-0 bg-green-900/80 text-white text-xs font-bold px-6 py-2 rounded-br-xl z-20 border-r border-b border-green-500/30">CON CIRCOLO</div>
-
+            <div class="glass-panel p-1 rounded-3xl overflow-hidden relative shadow-[0_0_50px_rgba(0,0,0,0.5)]">
                 <div class="overflow-x-auto">
                     <table class="w-full text-left border-collapse">
                         <thead>
-                            <tr class="border-b border-gray-800">
-                                <th class="p-4 md:p-6 text-gray-500 font-normal tracking-widest text-sm">CONCEPTO</th>
-                                <th class="p-4 md:p-6 text-red-400 font-normal tracking-widest text-sm bg-red-950/20 text-center md:text-left">COSTO MERCADO</th>
-                                <th class="p-4 md:p-6 text-green-400 font-bold tracking-widest text-sm bg-green-950/20 text-center md:text-left border-l border-green-500/10">ALIANZA CIRCOLO</th>
+                            <tr>
+                                <th class="p-5 text-gray-500 font-medium tracking-widest text-xs uppercase w-1/3">Concepto</th>
+                                <th class="p-5 text-red-400 font-medium tracking-widest text-xs uppercase w-1/3 bg-red-950/10 text-center">Mercado Regular</th>
+                                <th class="p-5 text-green-400 font-bold tracking-widest text-xs uppercase w-1/3 bg-green-950/20 text-center border-t-4 border-green-500">Alianza Circolo</th>
                             </tr>
                         </thead>
-                        <tbody class="text-base md:text-xl">
-                            <tr class="border-b border-gray-800 hover:bg-white/5 transition-colors">
-                                <td class="p-4 md:p-6 font-semibold">Alquiler Venue (Por Día)</td>
-                                <td class="p-4 md:p-6 text-gray-400 text-center md:text-left">$250k - $500k USD</td>
-                                <td class="p-4 md:p-6 text-white font-bold bg-green-900/5 text-center md:text-left border-l border-green-500/10">$0 / Simbólico</td>
+                        <tbody class="text-base">
+                            <tr class="border-b border-white/5">
+                                <td class="p-5 font-semibold text-white">Alquiler Venue (Por Día)</td>
+                                <td class="p-5 text-gray-400 text-center">$200k - $350k USD</td>
+                                <td class="p-5 text-white font-bold bg-green-900/10 text-center border-l border-r border-green-500/10 shadow-[inset_0_0_20px_rgba(74,222,128,0.05)]">$0 / Simbólico</td>
                             </tr>
-                            <tr class="border-b border-gray-800 hover:bg-white/5 transition-colors">
-                                <td class="p-4 md:p-6 font-semibold">Días Requeridos</td>
-                                <td class="p-4 md:p-6 text-gray-400 text-center md:text-left">5 Días</td>
-                                <td class="p-4 md:p-6 text-white font-bold bg-green-900/5 text-center md:text-left border-l border-green-500/10">5 Días</td>
+                            <tr class="border-b border-white/5">
+                                <td class="p-5 font-semibold text-white">Días Requeridos</td>
+                                <td class="p-5 text-gray-400 text-center">5 Días</td>
+                                <td class="p-5 text-white font-bold bg-green-900/10 text-center border-l border-r border-green-500/10 shadow-[inset_0_0_20px_rgba(74,222,128,0.05)]">5 Días</td>
                             </tr>
-                            <tr class="bg-white/5">
-                                <td class="p-4 md:p-6 text-lg md:text-2xl font-bold font-serif text-[#D4AF37]">COSTO TOTAL ESTIMADO</td>
-                                <td class="p-4 md:p-6 text-lg md:text-xl text-red-500/70 font-bold line-through decoration-red-500/30 text-center md:text-left">$2,500,000 USD</td>
-                                <td class="p-4 md:p-6 text-xl md:text-3xl text-green-400 font-bold bg-green-950/30 text-center md:text-left border-l border-green-500/10">MÍNIMO / $0</td>
+                            <tr>
+                                <td class="p-5 text-xl font-bold font-serif text-[#D4AF37]">COSTO TOTAL ESTIMADO</td>
+                                <td class="p-5 text-lg text-red-500/60 font-bold line-through decoration-red-500/40 text-center bg-red-950/5">$1,750,000 USD</td>
+                                <td class="p-5 text-2xl md:text-3xl text-green-400 font-bold bg-green-950/30 text-center border-x border-b border-green-500/20 shadow-[inset_0_0_30px_rgba(74,222,128,0.1)]">
+                                    MÍNIMO
+                                    <span class="block text-[10px] text-green-300 font-normal tracking-wide uppercase mt-1 opacity-70">Ahorro del 99%</span>
+                                </td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
-                
-                <div class="mt-8 text-center animate-pulse">
-                    <span class="bg-[#D4AF37] text-black font-bold px-8 py-3 rounded-full text-sm md:text-base shadow-lg shadow-[#D4AF37]/30 hover:bg-white hover:text-black transition-colors cursor-default">
-                        AHORRO POTENCIAL DE $2.5 MILLONES USD
-                    </span>
+            </div>
+            
+            <div class="mt-8 text-center">
+                <div class="inline-flex items-center gap-2 text-sm text-[#D4AF37] border border-[#D4AF37]/30 px-6 py-2 rounded-full bg-[#D4AF37]/5">
+                    <i class="fas fa-check-circle"></i> Impacto Directo: Ahorro potencial de $1.75 Millones USD
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- SLIDE 6: THE OFFER & GUARANTEE -->
-    <section id="offer" class="slide-section">
-        <div class="max-w-4xl mx-auto w-full">
+    <section id="offer" class="slide-section relative overflow-hidden bg-gradient-to-b from-neutral-900 to-black">
+        <div class="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-[#D4AF37]/10 to-transparent opacity-50"></div>
+
+        <div class="max-w-4xl mx-auto w-full relative z-10">
             <div class="text-center mb-10">
-                <h2 class="text-3xl md:text-6xl mb-4 font-serif text-white">Fase 1: La Llave del Oasis</h2>
-                <p class="text-gray-400 text-lg">Activación inmediata de protocolos diplomáticos para Diciembre 2026.</p>
+                <span class="text-[#D4AF37] text-xs font-bold tracking-[0.3em] uppercase mb-4 block">Fase 1: Activación</span>
+                <h2 class="text-4xl md:text-6xl mb-4 font-serif text-white">La Llave del Oasis</h2>
+                <p class="text-gray-400 text-lg">Inicio de protocolos diplomáticos para Diciembre 2026.</p>
             </div>
 
             <div class="grid md:grid-cols-2 gap-8 mb-12">
-                <div class="space-y-6 bg-white/5 p-8 rounded-2xl border border-white/10">
-                    <h3 class="text-[#D4AF37] font-bold text-xl border-b border-[#D4AF37]/30 pb-4">Alcance de Gestión</h3>
-                    <ul class="space-y-4 text-gray-300">
-                        <li class="flex gap-4 items-center"><i class="fas fa-check-circle text-green-500 text-xl"></i> Lobbying Gubernamental en Abu Dhabi</li>
-                        <li class="flex gap-4 items-center"><i class="fas fa-check-circle text-green-500 text-xl"></i> Bloqueo de Exclusividad de Fechas</li>
-                        <li class="flex gap-4 items-center"><i class="fas fa-check-circle text-green-500 text-xl"></i> Trámite de Licencias de Suelo UNESCO</li>
-                        <li class="flex gap-4 items-center"><i class="fas fa-check-circle text-green-500 text-xl"></i> Estudio de Viabilidad Técnica (6,000 pax)</li>
+                <div class="space-y-6 bg-white/5 p-8 rounded-2xl border border-white/10 backdrop-blur-sm">
+                    <h3 class="text-white font-serif font-bold text-xl border-b border-white/10 pb-4">Alcance de Gestión</h3>
+                    <ul class="space-y-5 text-gray-300 text-sm">
+                        <li class="flex gap-4 items-start"><i class="fas fa-check text-[#D4AF37] mt-1"></i> <span>Lobbying Gubernamental Directo en Abu Dhabi (DCT & Miral).</span></li>
+                        <li class="flex gap-4 items-start"><i class="fas fa-check text-[#D4AF37] mt-1"></i> <span>Bloqueo de Exclusividad de Fechas en Al Ain.</span></li>
+                        <li class="flex gap-4 items-start"><i class="fas fa-check text-[#D4AF37] mt-1"></i> <span>Trámite de Licencias de Suelo (Patrimonio UNESCO).</span></li>
+                        <li class="flex gap-4 items-start"><i class="fas fa-check text-[#D4AF37] mt-1"></i> <span>Estudio de Viabilidad Técnica para 6,000 pax.</span></li>
                     </ul>
                 </div>
                 
-                <div class="flex flex-col justify-center items-center bg-gradient-to-br from-neutral-900 to-black rounded-2xl p-8 border border-[#D4AF37]/30 relative overflow-hidden group hover:scale-105 transition-transform duration-500">
-                    <div class="absolute inset-0 bg-[#D4AF37]/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                    <p class="text-sm text-[#D4AF37] uppercase tracking-widest mb-4">INVERSIÓN ÚNICA FASE 1</p>
-                    <p class="text-6xl md:text-7xl font-bold text-white mb-2 tracking-tighter">$50,000</p>
-                    <p class="text-xl text-gray-500 mb-6">USD</p>
-                    <p class="text-xs text-center text-gray-500 border-t border-white/10 pt-4">Retorno de Inversión inmediato de 25x sobre valor de mercado.</p>
-                </div>
-            </div>
-
-            <!-- RISK FREE GUARANTEE -->
-            <div class="bg-black border border-[#D4AF37]/50 rounded-2xl p-8 relative overflow-hidden shadow-[0_0_40px_rgba(212,175,55,0.1)]">
-                <div class="absolute top-0 right-0 -mt-2 -mr-2 w-20 h-20 bg-[#D4AF37] rotate-45 opacity-20"></div>
-                <i class="fas fa-shield-alt absolute top-4 right-4 text-[#D4AF37]/50 text-2xl z-10"></i>
-                
-                <h3 class="text-2xl font-bold text-[#D4AF37] mb-4 flex items-center gap-3">
-                    <i class="fas fa-award"></i> Garantía de "Riesgo Cero"
-                </h3>
-                <p class="text-gray-300 text-lg leading-relaxed">
-                    Entendemos el valor de la confianza. Por ello, establecemos la siguiente cláusula de seguridad para <strong>Juan C. Guerrero</strong> y Blockchain Jungle:
-                </p>
-                <div class="mt-6 flex gap-4">
-                    <div class="w-1 bg-[#D4AF37]"></div>
-                    <p class="text-gray-400 italic font-light text-lg">
-                        "Si Circolo Life no logra asegurar la sede Al Ain Oasis bajo los términos de patrocinio gubernamental (costo cero o simbólico) para las fechas requeridas, <span class="text-[#D4AF37] font-bold border-b border-[#D4AF37]">la inversión de $50,000 USD será reembolsada en su totalidad</span>."
+                <div class="relative flex flex-col justify-center items-center bg-gradient-to-br from-neutral-800 to-black rounded-2xl p-8 border border-[#D4AF37]/40 shadow-[0_0_30px_rgba(212,175,55,0.1)] group overflow-hidden">
+                    <div class="absolute inset-0 bg-[#D4AF37]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+                    <div class="absolute -top-10 -right-10 w-32 h-32 bg-[#D4AF37]/20 rounded-full blur-2xl"></div>
+                    
+                    <p class="text-[10px] text-[#D4AF37] uppercase tracking-widest mb-4 font-bold">INVERSIÓN ÚNICA</p>
+                    <div class="flex items-start text-white relative">
+                        <span class="text-2xl mt-2 text-gray-400">$</span>
+                        <span class="text-6xl md:text-7xl font-bold tracking-tighter text-gradient-gold">63,000</span>
+                        <span class="text-xl mt-8 text-gray-400">USD</span>
+                    </div>
+                    <p class="text-xs text-center text-gray-500 border-t border-white/10 pt-4 mt-6 w-full">
+                        ROI Inmediato: 25x sobre valor de mercado.
                     </p>
                 </div>
             </div>
 
-            <div class="mt-16 text-center">
-                <button class="group relative bg-[#D4AF37] hover:bg-white text-black font-bold py-5 px-12 rounded-full text-xl transition-all shadow-[0_0_20px_rgba(212,175,55,0.2)] hover:shadow-[0_0_30px_rgba(212,175,55,0.8)] overflow-hidden">
-                    <span class="relative z-10">INICIAR GESTIÓN DIPLOMÁTICA</span>
-                </button>
-                <p class="mt-6 text-gray-600 text-sm tracking-widest uppercase">Propuesta válida para Diciembre 2025</p>
-                
-                <!-- FOOTER LOGOS -->
-                <div class="mt-12 flex justify-center items-center gap-8 opacity-30 hover:opacity-100 transition-opacity">
-                    <!-- REEMPLAZAR CON LOGO REAL BLOCKCHAIN JUNGLE -->
-                    <img src="https://uploads.onecompiler.io/4474z9257/4474zu2ku/Blockchain-Jungle.jpg" alt="BJ" class="h-8 grayscale hover:grayscale-0 transition-all">
-                    <div class="h-8 w-px bg-white/30"></div>
-                    <!-- REEMPLAZAR CON LOGO REAL CIRCOLO -->
-                    <img src="https://uploads.onecompiler.io/4474z9257/4474zu2ku/circololife_logo.jpeg" alt="Circolo" class="h-8 grayscale hover:grayscale-0 transition-all rounded-full">
+            <div class="glass-panel-accent rounded-xl p-8 relative overflow-hidden transition-all hover:border-green-500/40">
+                <div class="flex flex-col md:flex-row gap-6 items-center text-center md:text-left">
+                    <div class="w-16 h-16 rounded-full bg-green-500/10 flex items-center justify-center flex-shrink-0 border border-green-500/30">
+                        <i class="fas fa-shield-check text-green-400 text-2xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-white mb-2">Garantía de "Riesgo Cero"</h3>
+                        <p class="text-gray-300 text-sm leading-relaxed">
+                            Si Circolo Life no logra asegurar la sede Al Ain Oasis bajo términos de patrocinio gubernamental (costo cero/simbólico), <span class="text-green-400 font-bold border-b border-green-400/30">la inversión de $63,000 USD será reembolsada íntegramente</span>.
+                        </p>
+                    </div>
                 </div>
+            </div>
+
+            <div class="mt-16 text-center pb-20">
+                <button class="group relative bg-gradient-to-r from-[#D4AF37] to-[#AA771C] text-black font-bold py-5 px-16 rounded-full text-lg transition-all shadow-[0_0_20px_rgba(212,175,55,0.3)] hover:shadow-[0_0_40px_rgba(212,175,55,0.6)] hover:scale-105 active:scale-95">
+                    <span class="relative z-10 flex items-center gap-3">
+                        INICIAR GESTIÓN <i class="fas fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </span>
+                </button>
+                
+                <div class="mt-12 flex justify-center items-center gap-6 opacity-40 hover:opacity-100 transition-opacity">
+                    <img src="https://uploads.onecompiler.io/4474z9257/4474zu2ku/Blockchain-Jungle.jpg" alt="BJ" class="h-6 grayscale hover:grayscale-0 transition-all rounded">
+                    <span class="text-xl text-gray-600">×</span>
+                    <img src="https://uploads.onecompiler.io/4474z9257/4474zu2ku/circololife_logo.jpeg" alt="Circolo" class="h-6 grayscale hover:grayscale-0 transition-all rounded-full">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Nueva Sección: Venue Shortlist -->
+    <section id="shortlist" class="slide-section bg-black relative border-t border-white/5">
+        <div class="max-w-7xl mx-auto w-full z-10 relative">
+            <div class="text-center mb-12">
+                <span class="text-[#D4AF37] text-xs font-bold tracking-[0.2em] uppercase mb-4 block">Análisis de Mercado</span>
+                <h2 class="text-4xl md:text-5xl mb-4 text-white font-serif">Referencia de Venues EAU: Lista de Candidatos Blockchain Jungle</h2>
+                <p class="text-gray-400 text-sm max-w-3xl mx-auto italic border-t border-white/10 pt-4 mt-4">
+                    Nota: Todas las capacidades y rangos de precios son aproximados y se basan en el comportamiento típico del mercado de EAU para eventos a gran escala. Los números finales deben confirmarse directamente con el equipo de ventas/eventos de cada venue.
+                </p>
+            </div>
+
+            <!-- Grid de Venues -->
+            <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
+                
+                <!-- Card 1: Manarat Al Saadiyat -->
+                <div class="glass-panel venue-card rounded-xl overflow-hidden group">
+                    <div class="venue-img-container">
+                        <img src="https://visitabudhabi.ae/-/media/project/vad/galleryimages/what-to-see/historical-and-cultural-attractions/manarat-al-saadiyat/manarat-al-saadiyat-04.jpg?rev=6795bea86da548c7a48231088d30fc2b" class="venue-img" alt="Manarat Al Saadiyat">
+                        <div class="absolute top-4 right-4 bg-black/70 px-3 py-1 text-xs text-white rounded backdrop-blur">Abu Dhabi</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-[#D4AF37] mb-2 font-serif">Manarat Al Saadiyat</h3>
+                        <ul class="text-sm text-gray-300 space-y-3">
+                            <li><strong class="text-white block text-xs uppercase tracking-wide opacity-70">Tipo</strong> Centro cultural con salas modulares.</li>
+                            <li><strong class="text-white block text-xs uppercase tracking-wide opacity-70">Capacidad</strong> Ideal 1k-2k. 4k requiere setup complejo int/ext.</li>
+                            <li><strong class="text-white block text-xs uppercase tracking-wide opacity-70">Alquiler Est. (5 Días)</strong> <span class="text-red-400">USD 95k – 165k</span></li>
+                            <li class="pt-2 border-t border-white/10 italic text-xs">"Visualmente fuerte, pero operativamente justo para 4,000 pax."</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Card 2: ADNEC -->
+                <div class="glass-panel venue-card rounded-xl overflow-hidden group">
+                    <div class="venue-img-container">
+                        <img src="https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04?q=80&w=1920&auto=format&fit=crop" class="venue-img" alt="ADNEC">
+                        <div class="absolute top-4 right-4 bg-black/70 px-3 py-1 text-xs text-white rounded backdrop-blur">Abu Dhabi</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-[#D4AF37] mb-2 font-serif">ADNEC</h3>
+                        <ul class="text-sm text-gray-300 space-y-3">
+                            <li><strong class="text-white block text-xs uppercase tracking-wide opacity-70">Tipo</strong> Principal centro de exposiciones y convenciones.</li>
+                            <li><strong class="text-white block text-xs uppercase tracking-wide opacity-70">Capacidad</strong> 4,000+ pax es sencillo.</li>
+                            <li><strong class="text-white block text-xs uppercase tracking-wide opacity-70">Alquiler Est. (5 Días)</strong> <span class="text-red-400">USD 245k – 490k</span></li>
+                            <li class="pt-2 border-t border-white/10 italic text-xs">"Técnicamente ideal, pero sensación corporativa/expo si no se brandea."</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Card 3: Emirates Palace -->
+                <div class="glass-panel venue-card rounded-xl overflow-hidden group">
+                    <div class="venue-img-container">
+                        <img src="https://images.unsplash.com/photo-1590001155093-a3c66ab0c3ff?q=80&w=1920&auto=format&fit=crop" class="venue-img" alt="Emirates Palace">
+                        <div class="absolute top-4 right-4 bg-black/70 px-3 py-1 text-xs text-white rounded backdrop-blur">Abu Dhabi</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-[#D4AF37] mb-2 font-serif">Emirates Palace MO</h3>
+                        <ul class="text-sm text-gray-300 space-y-3">
+                            <li><strong class="text-white block text-xs uppercase tracking-wide opacity-70">Tipo</strong> Hotel palacio de ultra lujo.</li>
+                            <li><strong class="text-white block text-xs uppercase tracking-wide opacity-70">Capacidad</strong> Salón ~2k. 4k requiere múltiples áreas.</li>
+                            <li><strong class="text-white block text-xs uppercase tracking-wide opacity-70">Alquiler Est. (5 Días)</strong> <span class="text-red-400">USD 330k – 680k</span></li>
+                            <li class="pt-2 border-t border-white/10 italic text-xs">"Prestigio icónico, pero costo muy alto para capacidad de 4k."</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Card 4: Al Ain Palace Museum -->
+                <div class="glass-panel venue-card rounded-xl overflow-hidden group">
+                    <div class="venue-img-container">
+                        <img src="https://images.unsplash.com/photo-1546412414-e1885259563a?q=80&w=1920&auto=format&fit=crop" class="venue-img" alt="Al Ain Palace Museum">
+                        <div class="absolute top-4 right-4 bg-black/70 px-3 py-1 text-xs text-white rounded backdrop-blur">Al Ain</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-[#D4AF37] mb-2 font-serif">Al Ain Palace Museum</h3>
+                        <ul class="text-sm text-gray-300 space-y-3">
+                            <li><strong class="text-white block text-xs uppercase tracking-wide opacity-70">Tipo</strong> Residencia real histórica/museo.</li>
+                            <li><strong class="text-white block text-xs uppercase tracking-wide opacity-70">Capacidad</strong> No apto naturalmente para 4k pax. Restricciones.</li>
+                            <li><strong class="text-white block text-xs uppercase tracking-wide opacity-70">Alquiler Est. (5 Días)</strong> <span class="text-red-400">USD 55k – 120k</span></li>
+                            <li class="pt-2 border-t border-white/10 italic text-xs">"Alto valor patrimonial pero complejidad operativa extrema."</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Card 5: Madinat Jumeirah -->
+                <div class="glass-panel venue-card rounded-xl overflow-hidden group">
+                    <div class="venue-img-container">
+                        <img src="https://nuba.com/wp-content/uploads/2023/11/Dubai-Jumeirah-Al-Qasr-Entrance-Aerial-Drone.jpg" class="venue-img" alt="Madinat Jumeirah">
+                        <div class="absolute top-4 right-4 bg-black/70 px-3 py-1 text-xs text-white rounded backdrop-blur">Dubái</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-[#D4AF37] mb-2 font-serif">Madinat Jumeirah</h3>
+                        <ul class="text-sm text-gray-300 space-y-3">
+                            <li><strong class="text-white block text-xs uppercase tracking-wide opacity-70">Tipo</strong> Resort integrado de lujo.</li>
+                            <li><strong class="text-white block text-xs uppercase tracking-wide opacity-70">Capacidad</strong> Salones ~2k. 4k posible combinado.</li>
+                            <li><strong class="text-white block text-xs uppercase tracking-wide opacity-70">Alquiler Est. (5 Días)</strong> <span class="text-red-400">USD 270k – 600k</span></li>
+                            <li class="pt-2 border-t border-white/10 italic text-xs">"Historia visual fuerte, excelente para flagship si presupuesto permite."</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Card 6: JW Marriott Marquis -->
+                <div class="glass-panel venue-card rounded-xl overflow-hidden group">
+                    <div class="venue-img-container">
+                        <img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?q=80&w=1920&auto=format&fit=crop" class="venue-img" alt="JW Marriott Marquis">
+                        <div class="absolute top-4 right-4 bg-black/70 px-3 py-1 text-xs text-white rounded backdrop-blur">Dubái</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-[#D4AF37] mb-2 font-serif">JW Marriott Marquis</h3>
+                        <ul class="text-sm text-gray-300 space-y-3">
+                            <li><strong class="text-white block text-xs uppercase tracking-wide opacity-70">Tipo</strong> Principal hotel de negocios 5 estrellas.</li>
+                            <li><strong class="text-white block text-xs uppercase tracking-wide opacity-70">Capacidad</strong> Salón ~1.5k. 4k requiere mult-salas.</li>
+                            <li><strong class="text-white block text-xs uppercase tracking-wide opacity-70">Alquiler Est. (5 Días)</strong> <span class="text-red-400">USD 165k – 330k</span></li>
+                            <li class="pt-2 border-t border-white/10 italic text-xs">"Buena función y ubicación, visualmente menos único."</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Card 7: Grand Hyatt Dubai -->
+                <div class="glass-panel venue-card rounded-xl overflow-hidden group md:col-span-2 xl:col-span-1">
+                    <div class="venue-img-container">
+                        <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=1920&auto=format&fit=crop" class="venue-img" alt="Grand Hyatt Dubai">
+                        <div class="absolute top-4 right-4 bg-black/70 px-3 py-1 text-xs text-white rounded backdrop-blur">Dubái</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-[#D4AF37] mb-2 font-serif">Grand Hyatt Dubai</h3>
+                        <ul class="text-sm text-gray-300 space-y-3">
+                            <li><strong class="text-white block text-xs uppercase tracking-wide opacity-70">Tipo</strong> Gran hotel estilo convención.</li>
+                            <li><strong class="text-white block text-xs uppercase tracking-wide opacity-70">Capacidad</strong> Puede manejar 3k+. 4k factible.</li>
+                            <li><strong class="text-white block text-xs uppercase tracking-wide opacity-70">Alquiler Est. (5 Días)</strong> <span class="text-red-400">USD 190k – 380k</span></li>
+                            <li class="pt-2 border-t border-white/10 italic text-xs">"Balance capacidad/costo, pero sensación estándar de hotel."</li>
+                        </ul>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
