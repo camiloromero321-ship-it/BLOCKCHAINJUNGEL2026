@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blockchain Jungle Oasis 2026 - Propuesta Estratégica</title>
+    <title>Blockchain Jungle Oasis 2026 - Strategic Proposal</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <style>
@@ -12,7 +12,7 @@
         body {
             font-family: 'Montserrat', sans-serif;
             scroll-behavior: smooth;
-            background-color: #050505; /* Negro profundo */
+            background-color: #050505; /* Deep Black */
             color: #ffffff;
         }
         
@@ -20,7 +20,7 @@
             font-family: 'Playfair Display', serif;
         }
 
-        /* Utilidad para secciones de pantalla completa */
+        /* Full Screen Section Utility */
         .slide-section {
             min-height: 100vh;
             display: flex;
@@ -31,7 +31,7 @@
             padding: 6rem 1.5rem 4rem 1.5rem; 
         }
 
-        /* Gradiente Dorado de Lujo */
+        /* Luxury Gold Gradient */
         .bg-gradient-gold {
             background: linear-gradient(135deg, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C);
         }
@@ -52,7 +52,7 @@
             to { background-position: 200% center; }
         }
 
-        /* Paneles de Vidrio (Glassmorphism) */
+        /* Glassmorphism Panels */
         .glass-panel {
             background: rgba(20, 20, 20, 0.7);
             backdrop-filter: blur(20px);
@@ -67,7 +67,7 @@
             box-shadow: 0 0 30px rgba(74, 222, 128, 0.05);
         }
 
-        /* Animaciones */
+        /* Animations */
         .fade-in-up {
             animation: fadeInUp 1s cubic-bezier(0.2, 0.8, 0.2, 1);
         }
@@ -77,7 +77,7 @@
             to { opacity: 1; transform: translateY(0); }
         }
 
-        /* Ajuste de Logos */
+        /* Logo Adjustments */
         .nav-logo {
             height: 50px;
             width: auto;
@@ -88,7 +88,7 @@
             transform: scale(1.05);
         }
 
-        /* Scrollbar personalizado */
+        /* Custom Scrollbar */
         ::-webkit-scrollbar {
             width: 8px;
         }
@@ -127,6 +127,21 @@
         .venue-card:hover .venue-img {
             transform: scale(1.1);
         }
+        
+        /* Table Styles for Phase 2 */
+        .matrix-table th, .matrix-table td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+        .matrix-table th {
+            color: #D4AF37;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.75rem;
+            letter-spacing: 0.1em;
+        }
     </style>
 </head>
 <body class="antialiased selection:bg-[#D4AF37] selection:text-black">
@@ -143,11 +158,11 @@
 
     <div class="fixed right-6 top-1/2 transform -translate-y-1/2 z-50 hidden md:flex flex-col gap-5">
         <a href="#cover" class="group flex items-center gap-3 justify-end">
-            <span class="opacity-0 group-hover:opacity-100 text-xs text-[#D4AF37] transition-opacity duration-300 font-bold uppercase tracking-widest">Inicio</span>
+            <span class="opacity-0 group-hover:opacity-100 text-xs text-[#D4AF37] transition-opacity duration-300 font-bold uppercase tracking-widest">Home</span>
             <div class="w-2 h-2 rounded-full bg-white/20 group-hover:bg-[#D4AF37] group-hover:scale-150 transition-all duration-300"></div>
         </a>
         <a href="#vision" class="group flex items-center gap-3 justify-end">
-            <span class="opacity-0 group-hover:opacity-100 text-xs text-[#D4AF37] transition-opacity duration-300 font-bold uppercase tracking-widest">Visión</span>
+            <span class="opacity-0 group-hover:opacity-100 text-xs text-[#D4AF37] transition-opacity duration-300 font-bold uppercase tracking-widest">Vision</span>
             <div class="w-2 h-2 rounded-full bg-white/20 group-hover:bg-[#D4AF37] group-hover:scale-150 transition-all duration-300"></div>
         </a>
         <a href="#venue" class="group flex items-center gap-3 justify-end">
@@ -155,15 +170,19 @@
             <div class="w-2 h-2 rounded-full bg-white/20 group-hover:bg-[#D4AF37] group-hover:scale-150 transition-all duration-300"></div>
         </a>
         <a href="#financials" class="group flex items-center gap-3 justify-end">
-            <span class="opacity-0 group-hover:opacity-100 text-xs text-[#D4AF37] transition-opacity duration-300 font-bold uppercase tracking-widest">Finanzas</span>
+            <span class="opacity-0 group-hover:opacity-100 text-xs text-[#D4AF37] transition-opacity duration-300 font-bold uppercase tracking-widest">Financials</span>
             <div class="w-2 h-2 rounded-full bg-white/20 group-hover:bg-[#D4AF37] group-hover:scale-150 transition-all duration-300"></div>
         </a>
         <a href="#offer" class="group flex items-center gap-3 justify-end">
-            <span class="opacity-0 group-hover:opacity-100 text-xs text-[#D4AF37] transition-opacity duration-300 font-bold uppercase tracking-widest">Oferta</span>
+            <span class="opacity-0 group-hover:opacity-100 text-xs text-[#D4AF37] transition-opacity duration-300 font-bold uppercase tracking-widest">Phase 1</span>
+            <div class="w-2 h-2 rounded-full bg-white/20 group-hover:bg-[#D4AF37] group-hover:scale-150 transition-all duration-300"></div>
+        </a>
+        <a href="#phase2" class="group flex items-center gap-3 justify-end">
+            <span class="opacity-0 group-hover:opacity-100 text-xs text-[#D4AF37] transition-opacity duration-300 font-bold uppercase tracking-widest">Phase 2</span>
             <div class="w-2 h-2 rounded-full bg-white/20 group-hover:bg-[#D4AF37] group-hover:scale-150 transition-all duration-300"></div>
         </a>
         <a href="#shortlist" class="group flex items-center gap-3 justify-end">
-            <span class="opacity-0 group-hover:opacity-100 text-xs text-[#D4AF37] transition-opacity duration-300 font-bold uppercase tracking-widest">Candidatos</span>
+            <span class="opacity-0 group-hover:opacity-100 text-xs text-[#D4AF37] transition-opacity duration-300 font-bold uppercase tracking-widest">Shortlist</span>
             <div class="w-2 h-2 rounded-full bg-white/20 group-hover:bg-[#D4AF37] group-hover:scale-150 transition-all duration-300"></div>
         </a>
     </div>
@@ -176,7 +195,7 @@
 
         <div class="relative z-10 max-w-5xl mx-auto px-6 fade-in-up">
             <div class="inline-block px-4 py-1 rounded-full border border-[#D4AF37]/30 bg-[#D4AF37]/10 mb-8 backdrop-blur-sm">
-                <p class="text-[#D4AF37] tracking-[0.3em] uppercase text-xs font-bold">Propuesta Estratégica Confidencial</p>
+                <p class="text-[#D4AF37] tracking-[0.3em] uppercase text-xs font-bold">Confidential Strategic Proposal</p>
             </div>
             
             <h1 class="text-5xl md:text-8xl font-bold mb-6 leading-tight tracking-tight">
@@ -188,19 +207,19 @@
             <div class="w-24 h-1 bg-gradient-to-r from-transparent via-[#D4AF37] to-transparent mx-auto mb-10"></div>
             
             <p class="text-xl md:text-2xl text-gray-300 font-light mb-12 max-w-2xl mx-auto leading-relaxed">
-                Del corazón de la selva latina a un oasis milenario Patrimonio de la Humanidad.
+                The definitive transition: From the Latin Jungle to the Oasis of Global Sovereignty.
             </p>
             
             <div class="glass-panel inline-flex flex-col md:flex-row items-center gap-6 px-8 py-6 rounded-2xl border-t border-white/10 shadow-2xl">
                 <div class="text-center md:text-left">
-                    <p class="text-[10px] text-[#D4AF37] uppercase tracking-widest mb-1">Exclusivo Para</p>
+                    <p class="text-[10px] text-[#D4AF37] uppercase tracking-widest mb-1">Exclusive For</p>
                     <p class="text-2xl font-serif font-bold text-white">Juan C. Guerrero</p>
                     <p class="text-xs text-gray-400">CEO, Blockchain Jungle</p>
                 </div>
                 <div class="hidden md:block w-px h-12 bg-white/10"></div>
                  <div class="text-center md:text-left">
-                    <p class="text-[10px] text-[#D4AF37] uppercase tracking-widest mb-1">Fecha Validez</p>
-                    <p class="text-xl font-serif text-white">Dic 2025</p>
+                    <p class="text-[10px] text-[#D4AF37] uppercase tracking-widest mb-1">Validity Date</p>
+                    <p class="text-xl font-serif text-white">Dec 2025</p>
                 </div>
             </div>
         </div>
@@ -215,12 +234,12 @@
             <div class="order-2 md:order-1 relative">
                 <div class="absolute -top-20 -left-20 w-64 h-64 bg-[#D4AF37]/5 rounded-full blur-3xl"></div>
                 
-                <h2 class="text-4xl md:text-6xl mb-8 text-white relative z-10">La Evolución Natural<br><span class="text-serif italic text-[#D4AF37]">de la Narrativa</span></h2>
+                <h2 class="text-4xl md:text-6xl mb-8 text-white relative z-10">The Natural Evolution<br><span class="text-serif italic text-[#D4AF37]">of the Narrative</span></h2>
                 
                 <p class="text-gray-400 text-lg mb-8 leading-relaxed border-l-2 border-[#D4AF37]/30 pl-6">
-                    Blockchain Jungle 2025 posicionó a Costa Rica en el mapa global. <br><br>
-                    La visión 2026 es elevar esa narrativa: no movernos a un simple centro de convenciones, sino llevar la experiencia a un paisaje con 4,000 años de historia humana continua – el Oasis de Al Ain – declarado Patrimonio Mundial por la UNESCO y destacado por National Geographic como uno de los lugares más emblemáticos del desierto árabe. <br><br>
-                    Aquí, Blockchain Jungle no solo crece; trasciende.
+                    Blockchain Jungle 2025 put Costa Rica on the global map. <br><br>
+                    The 2026 vision is to elevate that narrative: not moving to a simple convention center, but taking the experience to a landscape with 4,000 years of continuous human history – the <strong>Al Ain Oasis</strong> – declared a UNESCO World Heritage Site and highlighted by National Geographic as one of the most emblematic places in the Arabian Desert. <br><br>
+                    Here, Blockchain Jungle doesn't just grow; it transcends.
                 </p>
                 
                 <div class="flex items-center justify-between bg-white/5 p-8 rounded-2xl border border-white/5 relative overflow-hidden">
@@ -230,7 +249,7 @@
                         <span class="text-[10px] tracking-[0.2em] text-gray-500 uppercase mt-1 block">Costa Rica</span>
                     </div>
                     <div class="flex flex-col items-center px-4 z-10">
-                        <span class="text-[10px] text-[#D4AF37] mb-2 tracking-widest">EVOLUCIÓN</span>
+                        <span class="text-[10px] text-[#D4AF37] mb-2 tracking-widest">EVOLUTION</span>
                         <div class="h-px w-20 bg-[#D4AF37]/50 relative">
                             <div class="absolute -top-1 -right-1 w-2 h-2 bg-[#D4AF37] rotate-45"></div>
                         </div>
@@ -247,9 +266,9 @@
                 <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
                 <div class="absolute bottom-8 left-8 right-8 translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
                     <p class="text-[#D4AF37] text-xs uppercase tracking-widest mb-2 flex items-center gap-2">
-                        <i class="fas fa-map-marker-alt"></i> El Destino
+                        <i class="fas fa-map-marker-alt"></i> The Destination
                     </p>
-                    <p class="text-3xl font-serif text-white leading-tight">Un Oasis Milenario Convertido en Escenario Global</p>
+                    <p class="text-3xl font-serif text-white leading-tight">An Ancient Oasis Turned Global Stage</p>
                 </div>
             </div>
         </div>
@@ -265,7 +284,7 @@
                     <i class="fas fa-university"></i> UNESCO World Heritage Site
                 </div>
                 <h2 class="text-5xl md:text-8xl mb-4 text-white font-serif tracking-tight">Al Ain Oasis</h2>
-                <p class="text-xl md:text-2xl text-[#D4AF37] italic font-serif opacity-80">"El escenario milenario donde la historia del desierto se une con la revolución de la libertad Web3."</p>
+                <p class="text-xl md:text-2xl text-[#D4AF37] italic font-serif opacity-80">"The ancient stage where desert history meets the revolution of Web3 freedom."</p>
             </div>
 
             <div class="grid md:grid-cols-3 gap-8">
@@ -273,30 +292,30 @@
                     <div class="w-14 h-14 bg-[#D4AF37]/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-[#D4AF37] transition-colors border border-[#D4AF37]/20">
                         <i class="fas fa-water text-2xl text-[#D4AF37] group-hover:text-black"></i>
                     </div>
-                    <h3 class="text-xl font-bold mb-4 font-serif text-white">El Sistema Falaj</h3>
+                    <h3 class="text-xl font-bold mb-4 font-serif text-white">The Falaj System</h3>
                     <p class="text-gray-400 text-sm leading-relaxed">
-                        Una ingeniería hídrica de más de 3,000 años que distribuye recursos mediante canales interconectados, un sistema descentralizado que antecedió a cualquier red moderna.<br>
-                        <span class="text-[#D4AF37] mt-3 block text-xs uppercase tracking-widest">La primera metáfora física de blockchain.</span>
+                        A hydraulic engineering marvel over 3,000 years old that distributes resources via interconnected channels, a decentralized system that predated any modern network.<br>
+                        <span class="text-[#D4AF37] mt-3 block text-xs uppercase tracking-widest">The first physical metaphor for blockchain.</span>
                     </p>
                 </div>
                 <div class="glass-panel p-8 rounded-2xl hover:bg-white/5 transition-all group duration-500 hover:-translate-y-2">
                     <div class="w-14 h-14 bg-[#D4AF37]/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-[#D4AF37] transition-colors border border-[#D4AF37]/20">
                         <i class="fas fa-tree text-2xl text-[#D4AF37] group-hover:text-black"></i>
                     </div>
-                    <h3 class="text-xl font-bold mb-4 font-serif text-white">1,200 Hectáreas de Vida</h3>
+                    <h3 class="text-xl font-bold mb-4 font-serif text-white">1,200 Hectares of Life</h3>
                     <p class="text-gray-400 text-sm leading-relaxed">
-                        147,000 palmeras creando un microclima natural que transforma un evento en una experiencia inmersiva.<br>
-                        <span class="text-[#D4AF37] mt-3 block text-xs uppercase tracking-widest">Espacio ilimitado para producción, escenarios y activaciones única</span>
+                        147,000 palm trees creating a natural microclimate that transforms an event into an immersive experience.<br>
+                        <span class="text-[#D4AF37] mt-3 block text-xs uppercase tracking-widest">Unlimited space for production, stages, and unique activations.</span>
                     </p>
                 </div>
                 <div class="glass-panel p-8 rounded-2xl hover:bg-white/5 transition-all group duration-500 hover:-translate-y-2">
                     <div class="w-14 h-14 bg-[#D4AF37]/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-[#D4AF37] transition-colors border border-[#D4AF37]/20">
                         <i class="fas fa-shield-alt text-2xl text-[#D4AF37] group-hover:text-black"></i>
                     </div>
-                    <h3 class="text-xl font-bold mb-4 font-serif text-white">Acceso Exclusivo</h3>
+                    <h3 class="text-xl font-bold mb-4 font-serif text-white">Exclusive Access</h3>
                     <p class="text-gray-400 text-sm leading-relaxed">
-                        Al Ain Oasis es un sitio cultural protegido; su acceso depende de permisos especiales y relaciones institucionales.<br>
-                        <span class="text-[#D4AF37] mt-3 block text-xs uppercase tracking-widest">Un venue que casi nadie puede conseguir – pero Blockchain Jungle sí.</span>
+                        Al Ain Oasis is a protected cultural site; access depends on special permits and institutional relationships.<br>
+                        <span class="text-[#D4AF37] mt-3 block text-xs uppercase tracking-widest">A venue almost no one can secure – but Blockchain Jungle can.</span>
                     </p>
                 </div>
             </div>
@@ -310,32 +329,32 @@
                     <div class="inline-block mb-6">
                         <img src="https://media.licdn.com/dms/image/v2/D4E3DAQEY4a2M3IRlPQ/image-scale_191_1128/B4EZY.Py5WHkAc-/0/1744801050897/circololife_cover?e=1765940400&v=beta&t=VYgHhxjYn1gi1R7nXSlPL6GjaIFkQwXd2PBwn42W0pY" alt="Circolo Life" class="h-20 w-auto object-contain opacity-100 rounded-full border border-[#D4AF37]/30 bg-black p-2">
                     </div>
-                    <h2 class="text-4xl md:text-5xl mb-6 font-serif">Tu Acceso Oficial al Ecosistema Soberano de Abu Dhabi</h2>
+                    <h2 class="text-4xl md:text-5xl mb-6 font-serif">Your Official Access to Abu Dhabi's Sovereign Ecosystem</h2>
                     <p class="text-lg text-gray-400 mb-8 leading-relaxed">
-                        Circolo es el operador local que desbloquea permisos, relaciones institucionales y acceso cultural que ningún proveedor externo puede obtener solo.
+                        Circolo is the local operator that unlocks permits, institutional relationships, and cultural access that no external provider can obtain alone.
                     </p>
                 </div>
 
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-left">
                     <div class="p-5 bg-white/5 rounded-xl border border-white/5 hover:border-[#D4AF37]/50 transition-colors">
                         <i class="fas fa-certificate text-[#D4AF37] text-xl mb-3"></i>
-                        <h4 class="font-bold text-white text-base">Permisos Especiales</h4>
-                        <p class="text-xs text-gray-400 mt-2">Permisos especiales para operar dentro de sitios protegidos, incluyendo espacios UNESCO. Sin estos permisos, ningún evento puede montarse en el Oasis.</p>
+                        <h4 class="font-bold text-white text-base">Special Permits</h4>
+                        <p class="text-xs text-gray-400 mt-2">Special permits to operate within protected sites, including UNESCO spaces. Without these permits, no event can be staged in the Oasis.</p>
                     </div>
                     <div class="p-5 bg-white/5 rounded-xl border border-white/5 hover:border-[#D4AF37]/50 transition-colors">
                         <i class="fas fa-user-shield text-[#D4AF37] text-xl mb-3"></i>
-                        <h4 class="font-bold text-white text-base">Seguridad Diplomática</h4>
-                        <p class="text-xs text-gray-400 mt-2">Coordinación de seguridad diplomática y acceso VIP para reguladores, speakers y patrocinadores clave. Tu evento opera con protocolo de Estado, no de hotel.</p>
+                        <h4 class="font-bold text-white text-base">Diplomatic Security</h4>
+                        <p class="text-xs text-gray-400 mt-2">Coordination of diplomatic security and VIP access for regulators, speakers, and key sponsors. Your event operates with State protocol, not hotel protocol.</p>
                     </div>
                     <div class="p-5 bg-white/5 rounded-xl border border-white/5 hover:border-[#D4AF37]/50 transition-colors">
                         <i class="fas fa-handshake-angle text-[#D4AF37] text-xl mb-3"></i>
-                        <h4 class="font-bold text-white text-base">Alianzas DCT</h4>
-                        <p class="text-xs text-gray-400 mt-2">Relación activa con el Departamento de Cultura y Turismo: la entidad que aprueba venues, permisos, activaciones y uso de patrimonio cultural. Con Circolo, todo se acelera.</p>
+                        <h4 class="font-bold text-white text-base">DCT Alliances</h4>
+                        <p class="text-xs text-gray-400 mt-2">Active relationship with the Department of Culture and Tourism: the entity that approves venues, permits, activations, and heritage usage. With Circolo, everything accelerates.</p>
                     </div>
                     <div class="p-5 bg-white/5 rounded-xl border border-white/5 hover:border-[#D4AF37]/50 transition-colors">
                         <i class="fas fa-award text-[#D4AF37] text-xl mb-3"></i>
                         <h4 class="font-bold text-white text-base">Track Record</h4>
-                        <p class="text-xs text-gray-400 mt-2">Productores de experiencias para Royal Capital y familias soberanas. Tenemos historial operando para las entidades que definen las reglas en la región.</p>
+                        <p class="text-xs text-gray-400 mt-2">Experience producers for Royal Capital and sovereign families. We have a history of operating for the entities that define the rules in the region.</p>
                     </div>
                 </div>
             </div>
@@ -344,36 +363,36 @@
 
     <section id="financials" class="slide-section bg-black">
         <div class="max-w-5xl mx-auto w-full">
-            <h2 class="text-3xl md:text-5xl mb-4 text-center">El <span class="text-[#D4AF37] italic font-serif">Game Changer</span> Financiero</h2>
-            <p class="text-center text-gray-400 mb-12 max-w-2xl mx-auto">La estrategia que libera capital para escalar Blockchain Jungle 2026 sin comprometer ambición.</p>
+            <h2 class="text-3xl md:text-5xl mb-4 text-center">The <span class="text-[#D4AF37] italic font-serif">Financial Game Changer</span></h2>
+            <p class="text-center text-gray-400 mb-12 max-w-2xl mx-auto">The strategy that frees up capital to scale Blockchain Jungle 2026 without compromising ambition.</p>
             
             <div class="glass-panel p-1 rounded-3xl overflow-hidden relative shadow-[0_0_50px_rgba(0,0,0,0.5)]">
                 <div class="overflow-x-auto">
                     <table class="w-full text-left border-collapse">
                         <thead>
                             <tr>
-                                <th class="p-5 text-gray-500 font-medium tracking-widest text-xs uppercase w-1/3">Concepto</th>
-                                <th class="p-5 text-red-400 font-medium tracking-widest text-xs uppercase w-1/3 bg-red-950/10 text-center">Mercado Regular</th>
-                                <th class="p-5 text-green-400 font-bold tracking-widest text-xs uppercase w-1/3 bg-green-950/20 text-center border-t-4 border-green-500">Alianza Circolo</th>
+                                <th class="p-5 text-gray-500 font-medium tracking-widest text-xs uppercase w-1/3">Concept</th>
+                                <th class="p-5 text-red-400 font-medium tracking-widest text-xs uppercase w-1/3 bg-red-950/10 text-center">Regular Market</th>
+                                <th class="p-5 text-green-400 font-bold tracking-widest text-xs uppercase w-1/3 bg-green-950/20 text-center border-t-4 border-green-500">Circolo Alliance</th>
                             </tr>
                         </thead>
                         <tbody class="text-base">
                             <tr class="border-b border-white/5">
-                                <td class="p-5 font-semibold text-white">Alquiler Venue (Por Día)</td>
+                                <td class="p-5 font-semibold text-white">Venue Rental (Per Day)</td>
                                 <td class="p-5 text-gray-400 text-center">$200k - $350k AED</td>
-                                <td class="p-5 text-white font-bold bg-green-900/10 text-center border-l border-r border-green-500/10 shadow-[inset_0_0_20px_rgba(74,222,128,0.05)]">$0<br><span class="text-[10px] font-normal opacity-80">“Acceso exclusivo vía relaciones institucionales”</span></td>
+                                <td class="p-5 text-white font-bold bg-green-900/10 text-center border-l border-r border-green-500/10 shadow-[inset_0_0_20px_rgba(74,222,128,0.05)]">$0<br><span class="text-[10px] font-normal opacity-80">“Exclusive access via institutional relations”</span></td>
                             </tr>
                             <tr class="border-b border-white/5">
-                                <td class="p-5 font-semibold text-white">Días Requeridos</td>
-                                <td class="p-5 text-gray-400 text-center">5 Días</td>
-                                <td class="p-5 text-white font-bold bg-green-900/10 text-center border-l border-r border-green-500/10 shadow-[inset_0_0_20px_rgba(74,222,128,0.05)]">5 Días</td>
+                                <td class="p-5 font-semibold text-white">Days Required</td>
+                                <td class="p-5 text-gray-400 text-center">5 Days</td>
+                                <td class="p-5 text-white font-bold bg-green-900/10 text-center border-l border-r border-green-500/10 shadow-[inset_0_0_20px_rgba(74,222,128,0.05)]">5 Days</td>
                             </tr>
                             <tr>
-                                <td class="p-5 text-xl font-bold font-serif text-[#D4AF37]">COSTO TOTAL ESTIMADO</td>
-                                <td class="p-5 text-sm text-red-500/60 font-bold line-through decoration-red-500/40 text-center bg-red-950/5">~ 1,750,000 AED <br><span class="text-[9px] no-underline block text-red-400/50 mt-1">(Estimado basado en tarifas de venues clase A en EAU para eventos de 4,000 personas durante el mes de diciembre).</span></td>
+                                <td class="p-5 text-xl font-bold font-serif text-[#D4AF37]">ESTIMATED TOTAL COST</td>
+                                <td class="p-5 text-sm text-red-500/60 font-bold line-through decoration-red-500/40 text-center bg-red-950/5">~ 1,750,000 AED <br><span class="text-[9px] no-underline block text-red-400/50 mt-1">(Estimated based on Class A venue rates in UAE for 4,000 pax events during December).</span></td>
                                 <td class="p-5 text-2xl md:text-3xl text-green-400 font-bold bg-green-950/30 text-center border-x border-b border-green-500/20 shadow-[inset_0_0_30px_rgba(74,222,128,0.1)]">
-                                    Simbolico
-                                    <span class="block text-[10px] text-green-300 font-normal tracking-wide uppercase mt-1 opacity-70">Ahorro del 99%</span>
+                                    Symbolic
+                                    <span class="block text-[10px] text-green-300 font-normal tracking-wide uppercase mt-1 opacity-70">99% Savings</span>
                                 </td>
                             </tr>
                         </tbody>
@@ -383,7 +402,7 @@
             
             <div class="mt-8 text-center">
                 <div class="inline-flex items-center gap-2 text-sm text-[#D4AF37] border border-[#D4AF37]/30 px-6 py-2 rounded-full bg-[#D4AF37]/5">
-                    <i class="fas fa-check-circle"></i> Impacto directo. Capital liberado para marketing global y producción de alto impacto.
+                    <i class="fas fa-check-circle"></i> Direct impact. Capital released for global marketing and high-impact production.
                 </div>
             </div>
         </div>
@@ -394,19 +413,19 @@
 
         <div class="max-w-4xl mx-auto w-full relative z-10">
             <div class="text-center mb-10">
-                <span class="text-[#D4AF37] text-xs font-bold tracking-[0.3em] uppercase mb-4 block">Fase 1: Activación</span>
-                <h2 class="text-4xl md:text-6xl mb-4 font-serif text-white">La autorización oficial del Oasis.</h2>
-                <p class="text-gray-400 text-lg">Bloqueo oficial de fechas y permisos para asegurar el venue en diciembre 2026.</p>
+                <span class="text-[#D4AF37] text-xs font-bold tracking-[0.3em] uppercase mb-4 block">Phase 1: Activation</span>
+                <h2 class="text-4xl md:text-6xl mb-4 font-serif text-white">Official Oasis Authorization.</h2>
+                <p class="text-gray-400 text-lg">Official date blocking and permits to secure the venue in December 2026.</p>
             </div>
 
             <div class="grid md:grid-cols-2 gap-8 mb-12">
                 <div class="space-y-6 bg-white/5 p-8 rounded-2xl border border-white/10 backdrop-blur-sm">
                     <h3 class="text-white font-serif font-bold text-xl border-b border-white/10 pb-4">Scope of Work</h3>
                     <ul class="space-y-5 text-gray-300 text-sm">
-                        <li class="flex gap-4 items-start"><i class="fas fa-check text-[#D4AF37] mt-1"></i> <div><strong>Lobbying directo con autoridades de Abu Dhabi (DCT & Miral)</strong><br><span class="text-xs text-gray-500">Gestión de permisos especiales para operar dentro de un sitio UNESCO.</span></div></li>
-                        <li class="flex gap-4 items-start"><i class="fas fa-check text-[#D4AF37] mt-1"></i> <div><strong>Bloqueo de exclusividad de fechas en Al Ain Oasis</strong><br><span class="text-xs text-gray-500">Reserva institucional del venue para diciembre 2026.</span></div></li>
-                        <li class="flex gap-4 items-start"><i class="fas fa-check text-[#D4AF37] mt-1"></i> <div><strong>Trámite de licencias patrimoniales (UNESCO)</strong><br><span class="text-xs text-gray-500">Acceso a espacios culturales protegidos que requieren autorización estatal.</span></div></li>
-                        <li class="flex gap-4 items-start"><i class="fas fa-check text-[#D4AF37] mt-1"></i> <div><strong>Estudio de viabilidad técnica para 1,000–5,000 pax</strong><br><span class="text-xs text-gray-500">Validación de infraestructura, accesos, flujos y logística general.</span></div></li>
+                        <li class="flex gap-4 items-start"><i class="fas fa-check text-[#D4AF37] mt-1"></i> <div><strong>Direct Lobbying with Abu Dhabi Authorities (DCT & Miral)</strong><br><span class="text-xs text-gray-500">Management of special permits to operate within a UNESCO site.</span></div></li>
+                        <li class="flex gap-4 items-start"><i class="fas fa-check text-[#D4AF37] mt-1"></i> <div><strong>Exclusive Date Blocking at Al Ain Oasis</strong><br><span class="text-xs text-gray-500">Institutional reservation of the venue for December 2026.</span></div></li>
+                        <li class="flex gap-4 items-start"><i class="fas fa-check text-[#D4AF37] mt-1"></i> <div><strong>Heritage License Processing (UNESCO)</strong><br><span class="text-xs text-gray-500">Access to protected cultural spaces requiring state authorization.</span></div></li>
+                        <li class="flex gap-4 items-start"><i class="fas fa-check text-[#D4AF37] mt-1"></i> <div><strong>Technical Viability Study for 1,000–5,000 pax</strong><br><span class="text-xs text-gray-500">Validation of infrastructure, access, flow, and general logistics.</span></div></li>
                     </ul>
                 </div>
                 
@@ -414,13 +433,13 @@
                     <div class="absolute inset-0 bg-[#D4AF37]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
                     <div class="absolute -top-10 -right-10 w-32 h-32 bg-[#D4AF37]/20 rounded-full blur-2xl"></div>
                     
-                    <p class="text-[10px] text-[#D4AF37] uppercase tracking-widest mb-4 font-bold">INVERSIÓN ÚNICA</p>
+                    <p class="text-[10px] text-[#D4AF37] uppercase tracking-widest mb-4 font-bold">ONE-TIME INVESTMENT</p>
                     <div class="flex items-start text-white relative">
                         <span class="text-6xl md:text-7xl font-bold tracking-tighter text-gradient-gold">300,000</span>
                         <span class="text-xl mt-8 text-gray-400 ml-2">AED</span>
                     </div>
                     <p class="text-xs text-center text-gray-500 border-t border-white/10 pt-4 mt-6 w-full">
-                        Autorización asegurada valorada en 1,750,000 AED – equivalente a cinco días de acceso a un venue patrimonial de clase A.
+                        Secured authorization valued at 1,750,000 AED – equivalent to five days access to a Class A heritage venue.
                     </p>
                 </div>
             </div>
@@ -431,10 +450,10 @@
                         <i class="fas fa-shield-check text-green-400 text-2xl"></i>
                     </div>
                     <div>
-                        <h3 class="text-xl font-bold text-white mb-2">Garantía de Riesgo Cero</h3>
+                        <h3 class="text-xl font-bold text-white mb-2">Zero Risk Guarantee</h3>
                         <p class="text-gray-300 text-sm leading-relaxed">
-                            Si Circolo no obtiene la autorización oficial del Oasis bajo los términos operativos descritos y siempre que el cliente haya cumplido con los requisitos, procesos y tiempos necesarios para la gestión, la inversión de USD $63,000 será reembolsada íntegramente.<br>
-                            <span class="block mt-2 italic text-xs opacity-70">Una garantía transparente, sujeta a condiciones razonables de colaboración y proceso.</span>
+                            If Circolo does not obtain official Oasis authorization under the described operational terms, and provided the client has met requirements, processes, and timelines, the investment of USD $63,000 will be fully refunded.<br>
+                            <span class="block mt-2 italic text-xs opacity-70">A transparent guarantee, subject to reasonable conditions of collaboration and process.</span>
                         </p>
                     </div>
                 </div>
@@ -443,31 +462,188 @@
             <div class="mt-16 text-center pb-20">
                 <button class="group relative bg-gradient-to-r from-[#D4AF37] to-[#AA771C] text-black font-bold py-5 px-16 rounded-full text-lg transition-all shadow-[0_0_20px_rgba(212,175,55,0.3)] hover:shadow-[0_0_40px_rgba(212,175,55,0.6)] hover:scale-105 active:scale-95">
                     <span class="relative z-10 flex items-center gap-3">
-                        INICIAR AUTORIZACIÓN <i class="fas fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                        START AUTHORIZATION <i class="fas fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
                     </span>
                 </button>
-                
-                <div class="mt-12 flex justify-center items-center gap-6 opacity-40 hover:opacity-100 transition-opacity">
-                    <img src="https://uploads.onecompiler.io/4474z9257/4474zu2ku/Blockchain-Jungle.jpg" alt="BJ" class="h-6 grayscale hover:grayscale-0 transition-all rounded">
-                    <span class="text-xl text-gray-600">×</span>
-                    <img src="https://uploads.onecompiler.io/4474z9257/4474zu2ku/circololife_logo.jpeg" alt="Circolo" class="h-6 grayscale hover:grayscale-0 transition-all rounded-full">
-                </div>
             </div>
         </div>
     </section>
 
-    <!-- Nueva Sección: Venue Shortlist -->
-    <section id="shortlist" class="slide-section bg-black relative border-t border-white/5">
-        <div class="max-w-7xl mx-auto w-full z-10 relative">
-            <div class="text-center mb-12">
-                <span class="text-[#D4AF37] text-xs font-bold tracking-[0.2em] uppercase mb-4 block">Análisis de Mercado</span>
-                <h2 class="text-4xl md:text-5xl mb-4 text-white font-serif">Referencia de Venues EAU: Lista de Candidatos Blockchain Jungle</h2>
-                <p class="text-gray-400 text-sm max-w-3xl mx-auto italic border-t border-white/10 pt-4 mt-4">
-                    Nota: Todas las capacidades y rangos de precios son aproximados y se basan en el comportamiento típico del mercado de EAU para eventos a gran escala. Los números finales deben confirmarse directamente con el equipo de ventas/eventos de cada venue.
+    <!-- NEW PHASE 2 SECTION -->
+    <section id="phase2" class="slide-section bg-neutral-900 border-t border-white/5 relative">
+        <div class="max-w-6xl mx-auto w-full z-10 relative">
+            
+            <!-- Header -->
+            <div class="text-center mb-16">
+                <div class="inline-block px-4 py-1 rounded-full border border-[#D4AF37]/30 bg-[#D4AF37]/10 mb-4">
+                    <p class="text-[#D4AF37] tracking-[0.2em] uppercase text-xs font-bold">Phase 2: End-to-End Operations</p>
+                </div>
+                <h2 class="text-4xl md:text-5xl font-serif text-white mb-6">Operational Partnership 360</h2>
+                <p class="text-gray-400 max-w-3xl mx-auto leading-relaxed">
+                    Blockchain Jungle is preparing its first Middle East edition. This proposal defines an Operational Partnership where Circolo acts as the integrated local operating partner in the UAE, absorbing execution complexity while Blockchain Jungle retains full strategic control.
                 </p>
             </div>
 
-            <!-- Grid de Venues -->
+            <!-- Two-Lane Structure -->
+            <div class="grid md:grid-cols-2 gap-8 mb-16">
+                <!-- Strategic Lane -->
+                <div class="glass-panel p-8 rounded-2xl border-t-4 border-gray-500">
+                    <h3 class="text-xl font-bold mb-4 font-serif">Strategic Lane</h3>
+                    <p class="text-xs text-gray-400 uppercase tracking-widest mb-4">Lead: Blockchain Jungle</p>
+                    <ul class="space-y-3 text-sm text-gray-300">
+                        <li class="flex gap-3"><i class="fas fa-check-circle text-gray-500"></i> Overall event vision and direction</li>
+                        <li class="flex gap-3"><i class="fas fa-check-circle text-gray-500"></i> Brand, narrative, and positioning</li>
+                        <li class="flex gap-3"><i class="fas fa-check-circle text-gray-500"></i> Program architecture and content</li>
+                        <li class="flex gap-3"><i class="fas fa-check-circle text-gray-500"></i> Sponsor strategy & Global partnerships</li>
+                    </ul>
+                </div>
+                <!-- Operational Lane -->
+                <div class="glass-panel p-8 rounded-2xl border-t-4 border-[#D4AF37] bg-[#D4AF37]/5">
+                    <h3 class="text-xl font-bold mb-4 font-serif text-[#D4AF37]">Local Operations Lane</h3>
+                    <p class="text-xs text-[#D4AF37] uppercase tracking-widest mb-4">Lead: Circolo</p>
+                    <ul class="space-y-3 text-sm text-gray-300">
+                        <li class="flex gap-3"><i class="fas fa-check-circle text-[#D4AF37]"></i> UAE-based operational execution</li>
+                        <li class="flex gap-3"><i class="fas fa-check-circle text-[#D4AF37]"></i> Government and regulatory coordination</li>
+                        <li class="flex gap-3"><i class="fas fa-check-circle text-[#D4AF37]"></i> Permits, licenses, and compliance</li>
+                        <li class="flex gap-3"><i class="fas fa-check-circle text-[#D4AF37]"></i> Vendor sourcing and live leadership</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Responsibility Matrix -->
+            <div class="mb-16">
+                <h3 class="text-2xl font-serif text-white mb-6 text-center">Responsibility Matrix</h3>
+                <div class="glass-panel rounded-xl overflow-hidden">
+                    <table class="w-full text-sm matrix-table">
+                        <thead class="bg-white/5">
+                            <tr>
+                                <th>Area</th>
+                                <th>Blockchain Jungle</th>
+                                <th>Circolo</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Strategic Direction</td>
+                                <td class="text-green-400 font-bold">Yes</td>
+                                <td class="text-gray-500">No</td>
+                            </tr>
+                            <tr>
+                                <td>Permits & Licensing</td>
+                                <td class="text-gray-500">No</td>
+                                <td class="text-[#D4AF37] font-bold">Yes</td>
+                            </tr>
+                            <tr>
+                                <td>Vendor Management</td>
+                                <td>Shared</td>
+                                <td class="text-[#D4AF37] font-bold">Lead</td>
+                            </tr>
+                            <tr>
+                                <td>Live Event Execution</td>
+                                <td>Shared</td>
+                                <td class="text-[#D4AF37] font-bold">Lead</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Commercial Model -->
+            <div class="mb-16">
+                <h3 class="text-2xl font-serif text-white mb-8 text-center">Commercial Terms (AED & USD)</h3>
+                <div class="grid md:grid-cols-3 gap-6">
+                    
+                    <!-- Base Fees -->
+                    <div class="glass-panel p-6 rounded-xl relative overflow-hidden group hover:border-[#D4AF37]/50 transition-colors">
+                        <div class="absolute top-0 right-0 p-2 bg-white/5 rounded-bl-lg text-xs text-gray-400">Fixed</div>
+                        <h4 class="text-lg font-bold text-[#D4AF37] mb-4">Base Fees</h4>
+                        <div class="space-y-4">
+                            <div>
+                                <p class="text-xs text-gray-400 uppercase">One-Time Setup</p>
+                                <p class="text-xl font-bold text-white">92,000 AED <span class="text-sm font-normal text-gray-500">($25k)</span></p>
+                            </div>
+                            <div>
+                                <p class="text-xs text-gray-400 uppercase">Monthly Retainer</p>
+                                <p class="text-xl font-bold text-white">36,700 AED <span class="text-sm font-normal text-gray-500">($10k/mo)</span></p>
+                            </div>
+                            <div>
+                                <p class="text-xs text-gray-400 uppercase">Live Execution</p>
+                                <p class="text-xl font-bold text-white">92,000 AED <span class="text-sm font-normal text-gray-500">($25k)</span></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Milestone Fees -->
+                    <div class="glass-panel p-6 rounded-xl relative overflow-hidden group hover:border-[#D4AF37]/50 transition-colors">
+                        <div class="absolute top-0 right-0 p-2 bg-white/5 rounded-bl-lg text-xs text-gray-400">Variable</div>
+                        <h4 class="text-lg font-bold text-[#D4AF37] mb-4">Milestones</h4>
+                        <ul class="space-y-3 text-sm">
+                            <li class="flex justify-between border-b border-white/5 pb-2">
+                                <span>Venue Locked</span>
+                                <span class="font-bold text-white">$10k</span>
+                            </li>
+                            <li class="flex justify-between border-b border-white/5 pb-2">
+                                <span>Permits Secured</span>
+                                <span class="font-bold text-white">$10k</span>
+                            </li>
+                            <li class="flex justify-between border-b border-white/5 pb-2">
+                                <span>Vendor Contracts</span>
+                                <span class="font-bold text-white">$10k</span>
+                            </li>
+                            <li class="flex justify-between">
+                                <span>Readiness Sign-off</span>
+                                <span class="font-bold text-white">$10k</span>
+                            </li>
+                        </ul>
+                        <p class="text-xs text-gray-500 mt-4 italic">*Each milestone is approx 36,700 AED</p>
+                    </div>
+
+                    <!-- Success Fees -->
+                    <div class="glass-panel p-6 rounded-xl relative overflow-hidden bg-gradient-to-br from-[#D4AF37]/10 to-transparent border border-[#D4AF37]/30">
+                        <div class="absolute top-0 right-0 p-2 bg-[#D4AF37]/20 rounded-bl-lg text-xs text-[#D4AF37]">Upside</div>
+                        <h4 class="text-lg font-bold text-[#D4AF37] mb-4">Success Fees</h4>
+                        <ul class="space-y-4 text-sm">
+                            <li>
+                                <span class="block text-gray-400 text-xs uppercase">Sponsors (Originated by Circolo)</span>
+                                <span class="text-xl font-bold text-white">10%</span> <span class="text-gray-500">of net cash</span>
+                            </li>
+                            <li>
+                                <span class="block text-gray-400 text-xs uppercase">Strategic Partners</span>
+                                <span class="text-xl font-bold text-white">5–10%</span> <span class="text-gray-500">of value</span>
+                            </li>
+                            <li>
+                                <span class="block text-gray-400 text-xs uppercase">Attendees (Above baseline)</span>
+                                <span class="text-xl font-bold text-white">$1</span> <span class="text-gray-500">per paid attendee</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Guiding Principle -->
+            <div class="text-center bg-white/5 p-8 rounded-2xl border border-white/10">
+                <i class="fas fa-quote-left text-[#D4AF37] text-2xl mb-4 block opacity-50"></i>
+                <p class="text-xl italic text-gray-300 max-w-4xl mx-auto">
+                    "Circolo is responsible for execution, not revenue. Blockchain Jungle retains strategic and commercial control. This partnership is structured to scale with clarity, without dependency, friction, or ambiguity."
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- New Section: Venue Shortlist -->
+    <section id="shortlist" class="slide-section bg-black relative border-t border-white/5">
+        <div class="max-w-7xl mx-auto w-full z-10 relative">
+            <div class="text-center mb-12">
+                <span class="text-[#D4AF37] text-xs font-bold tracking-[0.2em] uppercase mb-4 block">Market Analysis</span>
+                <h2 class="text-4xl md:text-5xl mb-4 text-white font-serif">UAE Venue Reference: Blockchain Jungle Shortlist</h2>
+                <p class="text-gray-400 text-sm max-w-3xl mx-auto italic border-t border-white/10 pt-4 mt-4">
+                    Note: All capacities and price ranges are approximate and based on typical UAE market behavior for large-scale events. Final numbers must be confirmed directly with each venue’s events/sales team.
+                </p>
+            </div>
+
+            <!-- Venue Grid -->
             <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
                 
                 <!-- Card 1: Manarat Al Saadiyat -->
@@ -479,10 +655,10 @@
                     <div class="p-6">
                         <h3 class="text-xl font-bold text-[#D4AF37] mb-2 font-serif">Manarat Al Saadiyat</h3>
                         <ul class="text-sm text-gray-300 space-y-3">
-                            <li><strong class="text-white block text-xs uppercase tracking-wide opacity-70">Tipo</strong> Centro cultural con salas modulares.</li>
-                            <li><strong class="text-white block text-xs uppercase tracking-wide opacity-70">Capacidad</strong> ~2,500 pax. Mejor 1k-2k. 4k requiere setup complejo.</li>
-                            <li><strong class="text-white block text-xs uppercase tracking-wide opacity-70">Alquiler Est. (5 Días)</strong> <span class="text-red-400">AED 1,700,000</span></li>
-                            <li class="pt-2 border-t border-white/10 italic text-xs">"Visualmente fuerte, pero operativamente justo para 4,000 pax."</li>
+                            <li><strong class="text-white block text-xs uppercase tracking-wide opacity-70">Type</strong> Cultural center with modular halls.</li>
+                            <li><strong class="text-white block text-xs uppercase tracking-wide opacity-70">Capacity</strong> ~2,500 pax. Best 1k-2k. 4k requires complex setup.</li>
+                            <li><strong class="text-white block text-xs uppercase tracking-wide opacity-70">Est. Rental (5 Days)</strong> <span class="text-red-400">AED 1,700,000</span></li>
+                            <li class="pt-2 border-t border-white/10 italic text-xs">"Visually strong, but operationally tight for 4,000 pax."</li>
                         </ul>
                     </div>
                 </div>
@@ -496,10 +672,10 @@
                     <div class="p-6">
                         <h3 class="text-xl font-bold text-[#D4AF37] mb-2 font-serif">ADNEC</h3>
                         <ul class="text-sm text-gray-300 space-y-3">
-                            <li><strong class="text-white block text-xs uppercase tracking-wide opacity-70">Tipo</strong> Principal centro de exposiciones y convenciones.</li>
-                            <li><strong class="text-white block text-xs uppercase tracking-wide opacity-70">Capacidad</strong> 4,000+ pax es sencillo.</li>
-                            <li><strong class="text-white block text-xs uppercase tracking-wide opacity-70">Alquiler Est. (5 Días)</strong> <span class="text-red-400">AED 1,800,000</span></li>
-                            <li class="pt-2 border-t border-white/10 italic text-xs">"Técnicamente ideal, pero sensación corporativa/expo si no se brandea."</li>
+                            <li><strong class="text-white block text-xs uppercase tracking-wide opacity-70">Type</strong> Major exhibition and convention center.</li>
+                            <li><strong class="text-white block text-xs uppercase tracking-wide opacity-70">Capacity</strong> 4,000+ pax is straightforward.</li>
+                            <li><strong class="text-white block text-xs uppercase tracking-wide opacity-70">Est. Rental (5 Days)</strong> <span class="text-red-400">AED 1,800,000</span></li>
+                            <li class="pt-2 border-t border-white/10 italic text-xs">"Technically ideal, but corporate/expo feel unless heavily branded."</li>
                         </ul>
                     </div>
                 </div>
@@ -513,10 +689,10 @@
                     <div class="p-6">
                         <h3 class="text-xl font-bold text-[#D4AF37] mb-2 font-serif">Emirates Palace MO</h3>
                         <ul class="text-sm text-gray-300 space-y-3">
-                            <li><strong class="text-white block text-xs uppercase tracking-wide opacity-70">Tipo</strong> Hotel palacio de ultra lujo.</li>
-                            <li><strong class="text-white block text-xs uppercase tracking-wide opacity-70">Capacidad</strong> Salón ~2k. 4k requiere múltiples áreas.</li>
-                            <li><strong class="text-white block text-xs uppercase tracking-wide opacity-70">Alquiler Est. (5 Días)</strong> <span class="text-red-400">AED 2,000,000</span></li>
-                            <li class="pt-2 border-t border-white/10 italic text-xs">"Prestigio icónico, pero costo muy alto para capacidad de 4k."</li>
+                            <li><strong class="text-white block text-xs uppercase tracking-wide opacity-70">Type</strong> Ultra-luxury palace hotel.</li>
+                            <li><strong class="text-white block text-xs uppercase tracking-wide opacity-70">Capacity</strong> Ballroom ~2k. 4k requires multiple areas.</li>
+                            <li><strong class="text-white block text-xs uppercase tracking-wide opacity-70">Est. Rental (5 Days)</strong> <span class="text-red-400">AED 2,000,000</span></li>
+                            <li class="pt-2 border-t border-white/10 italic text-xs">"Iconic prestige, but very high cost for 4k capacity."</li>
                         </ul>
                     </div>
                 </div>
@@ -530,10 +706,10 @@
                     <div class="p-6">
                         <h3 class="text-xl font-bold text-[#D4AF37] mb-2 font-serif">Al Ain Palace Museum</h3>
                         <ul class="text-sm text-gray-300 space-y-3">
-                            <li><strong class="text-white block text-xs uppercase tracking-wide opacity-70">Tipo</strong> Residencia real histórica/museo.</li>
-                            <li><strong class="text-white block text-xs uppercase tracking-wide opacity-70">Capacidad</strong> No apto naturalmente para 4k pax. Restricciones.</li>
-                            <li><strong class="text-white block text-xs uppercase tracking-wide opacity-70">Alquiler Est. (5 Días)</strong> <span class="text-red-400">AED 500,000</span></li>
-                            <li class="pt-2 border-t border-white/10 italic text-xs">"Alto valor patrimonial pero complejidad operativa extrema."</li>
+                            <li><strong class="text-white block text-xs uppercase tracking-wide opacity-70">Type</strong> Historical royal residence/museum.</li>
+                            <li><strong class="text-white block text-xs uppercase tracking-wide opacity-70">Capacity</strong> Not naturally suited for 4k pax. Constraints.</li>
+                            <li><strong class="text-white block text-xs uppercase tracking-wide opacity-70">Est. Rental (5 Days)</strong> <span class="text-red-400">AED 500,000</span></li>
+                            <li class="pt-2 border-t border-white/10 italic text-xs">"High heritage value but extreme operational complexity."</li>
                         </ul>
                     </div>
                 </div>
@@ -542,15 +718,15 @@
                 <div class="glass-panel venue-card rounded-xl overflow-hidden group">
                     <div class="venue-img-container">
                         <img src="https://nuba.com/wp-content/uploads/2023/11/Dubai-Jumeirah-Al-Qasr-Entrance-Aerial-Drone.jpg" class="venue-img" alt="Madinat Jumeirah">
-                        <div class="absolute top-4 right-4 bg-black/70 px-3 py-1 text-xs text-white rounded backdrop-blur">Dubái</div>
+                        <div class="absolute top-4 right-4 bg-black/70 px-3 py-1 text-xs text-white rounded backdrop-blur">Dubai</div>
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-bold text-[#D4AF37] mb-2 font-serif">Madinat Jumeirah</h3>
                         <ul class="text-sm text-gray-300 space-y-3">
-                            <li><strong class="text-white block text-xs uppercase tracking-wide opacity-70">Tipo</strong> Resort integrado de lujo.</li>
-                            <li><strong class="text-white block text-xs uppercase tracking-wide opacity-70">Capacidad</strong> Salones ~1.8-2.5k. 4k posible combinado.</li>
-                            <li><strong class="text-white block text-xs uppercase tracking-wide opacity-70">Alquiler Est. (5 Días)</strong> <span class="text-red-400">AED 1,500,000</span></li>
-                            <li class="pt-2 border-t border-white/10 italic text-xs">"Historia visual fuerte, excelente para flagship si presupuesto permite."</li>
+                            <li><strong class="text-white block text-xs uppercase tracking-wide opacity-70">Type</strong> Luxury integrated resort.</li>
+                            <li><strong class="text-white block text-xs uppercase tracking-wide opacity-70">Capacity</strong> Ballrooms ~1.8-2.5k. 4k possible combined.</li>
+                            <li><strong class="text-white block text-xs uppercase tracking-wide opacity-70">Est. Rental (5 Days)</strong> <span class="text-red-400">AED 1,500,000</span></li>
+                            <li class="pt-2 border-t border-white/10 italic text-xs">"Strong visual story, excellent for flagship if budget allows."</li>
                         </ul>
                     </div>
                 </div>
@@ -559,15 +735,15 @@
                 <div class="glass-panel venue-card rounded-xl overflow-hidden group">
                     <div class="venue-img-container">
                         <img src="https://static.propsearch.ae/photos/dubai/buildings/jw-marriott-marquis-dubai-961_xl.jpg" class="venue-img" alt="JW Marriott Marquis">
-                        <div class="absolute top-4 right-4 bg-black/70 px-3 py-1 text-xs text-white rounded backdrop-blur">Dubái</div>
+                        <div class="absolute top-4 right-4 bg-black/70 px-3 py-1 text-xs text-white rounded backdrop-blur">Dubai</div>
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-bold text-[#D4AF37] mb-2 font-serif">JW Marriott Marquis</h3>
                         <ul class="text-sm text-gray-300 space-y-3">
-                            <li><strong class="text-white block text-xs uppercase tracking-wide opacity-70">Tipo</strong> Principal hotel de negocios 5 estrellas.</li>
-                            <li><strong class="text-white block text-xs uppercase tracking-wide opacity-70">Capacidad</strong> Salón ~1.3-1.5k. 4k requiere mult-salas.</li>
-                            <li><strong class="text-white block text-xs uppercase tracking-wide opacity-70">Alquiler Est. (5 Días)</strong> <span class="text-red-400">AED 900,000</span></li>
-                            <li class="pt-2 border-t border-white/10 italic text-xs">"Buena función y ubicación, visualmente menos único."</li>
+                            <li><strong class="text-white block text-xs uppercase tracking-wide opacity-70">Type</strong> Major 5-star business hotel.</li>
+                            <li><strong class="text-white block text-xs uppercase tracking-wide opacity-70">Capacity</strong> Ballroom ~1.3-1.5k. 4k requires mult-room.</li>
+                            <li><strong class="text-white block text-xs uppercase tracking-wide opacity-70">Est. Rental (5 Days)</strong> <span class="text-red-400">AED 900,000</span></li>
+                            <li class="pt-2 border-t border-white/10 italic text-xs">"Good function & location, visually less unique."</li>
                         </ul>
                     </div>
                 </div>
@@ -577,3 +753,4 @@
     </section>
 
 </body>
+</html>
